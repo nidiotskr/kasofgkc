@@ -31,15 +31,15 @@ const MobileMenu = ({ hiddenClass, handleRemove }) => {
                             </a>
                         </Link>
                         <button className="navbar-close" onClick={handleRemove}>
-                            <svg className="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            <svg className="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                         </button>
                     </div>
                     <div>
                         <ul className="mobile-menu">
                             <li className={isActive.key == 1 ? "mb-1 menu-item-has-children rounded-xl active" : "mb-1 menu-item-has-children rounded-xl"} onClick={() => handleToggle(1)}>
-                                <span class="menu-expand">+</span>
+                                <span className="menu-expand">+</span>
                                 <Link href="#">
                                     <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl">Home</a>
                                 </Link>
@@ -97,7 +97,7 @@ const MobileMenu = ({ hiddenClass, handleRemove }) => {
                                 </Link>
                             </li>
                             <li className={isActive.key == 2 ? "mb-1 menu-item-has-children rounded-xl active" : "mb-1 menu-item-has-children rounded-xl"} onClick={() => handleToggle(2)}>
-                                <span class="menu-expand">+</span>
+                                <span className="menu-expand">+</span>
                                 <Link href="#">
                                     <a className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500">Blog</a>
                                 </Link>
