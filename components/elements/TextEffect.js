@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
-const TextEffect = ({ text1, text2 }) => {
+const TextEffect = ({ text }) => {
   return (
     <>
-      <ReactTypingEffect text={[text1, text2]} />
+      <ReactTypingEffect text={[text]} typingDelay={1000} speed={250} />
     </>
   );
 };

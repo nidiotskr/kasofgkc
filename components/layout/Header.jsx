@@ -24,53 +24,49 @@ const Header = ({ handleHidden }) => {
         <div className="container bg-transparent">
           <nav className="bg-transparent flex justify-between items-center py-3">
             <Link href="/">
-              <a className="text-3xl font-semibold leading-none">
-                <img
-                  className="h-10"
-                  src="/assets/imgs/logos/monst-logo.svg"
-                  alt="Monst"
-                />
+              <a className="text-3xl text-white font-semibold leading-none">
+                LOGO
               </a>
             </Link>
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
               <li className="group relative pt-4 pb-4 has-child">
                 <Link href="/">
-                  <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     Home
                   </a>
                 </Link>
                 <ul className="drop-down-menu min-w-200">
                   <li>
                     <Link href="/">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Landing page 1
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/index-2">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Landing page 2
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/index-3">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Landing page 3
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/index-4">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Landing page 4
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/index-5">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Landing page 5
                       </a>
                     </Link>
@@ -79,63 +75,63 @@ const Header = ({ handleHidden }) => {
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/about">
-                  <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     About Us
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/services">
-                  <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     Services
                   </a>
                 </Link>
               </li>
               <li className="group relative pt-4 pb-4 has-child">
                 <Link href="#">
-                  <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     Company
                   </a>
                 </Link>
                 <ul className="drop-down-menu min-w-200">
                   <li>
                     <Link href="/portfolio">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Portfolio
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/team">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Team
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/testimonials">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Testimonials
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/pricing">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Pricing
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/faqs">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Faqs
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/404">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         404
                       </a>
                     </Link>
@@ -144,35 +140,35 @@ const Header = ({ handleHidden }) => {
               </li>
               <li className="group relative pt-4 pb-4 has-child">
                 <Link href="#">
-                  <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     Blog
                   </a>
                 </Link>
                 <ul className="drop-down-menu min-w-200">
                   <li>
                     <Link href="/blog">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Category 1
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/blog-2">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Category 2
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/blog-single">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Single 1
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/blog-single-2">
-                      <a className="menu-sub-item text-sm text-blueGray-600 hover:text-blueGray-500">
+                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
                         Single 2
                       </a>
                     </Link>
@@ -181,7 +177,7 @@ const Header = ({ handleHidden }) => {
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/contact">
-                  <a className="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     Contact
                   </a>
                 </Link>

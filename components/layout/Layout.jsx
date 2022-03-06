@@ -19,7 +19,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Monst - NextJs Tailwind CSS Landing Page</title>
+        <title>
+          KSAOFGKC - The Korean American Association of the greather Kansas City
+        </title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
