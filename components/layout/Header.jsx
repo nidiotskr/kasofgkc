@@ -17,7 +17,7 @@ const Header = ({ handleHidden }) => {
       <header
         className={
           scroll
-            ? 'bg-transparent sticky-bar mt-4 stick'
+            ? 'bg-blueGray-800 sticky-bar mt-4 stick'
             : 'bg-transparent sticky-bar mt-4'
         }
       >
@@ -32,42 +32,21 @@ const Header = ({ handleHidden }) => {
               <li className="group relative pt-4 pb-4 has-child">
                 <Link href="/">
                   <a className="text-sm font-semibold text-white hover:text-blueGray-500">
-                    Home
+                    한인회 소개
                   </a>
                 </Link>
                 <ul className="drop-down-menu min-w-200">
                   <li>
                     <Link href="/">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Landing page 1
+                      <a className="menu-sub-item text-sm text-black hover:text-blueGray-500">
+                        Drop-down-menu 1
                       </a>
                     </Link>
                   </li>
                   <li>
                     <Link href="/index-2">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Landing page 2
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-3">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Landing page 3
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-4">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Landing page 4
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-5">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Landing page 5
+                      <a className="menu-sub-item text-sm text-black hover:text-blueGray-500">
+                        Drop-down-menu 2
                       </a>
                     </Link>
                   </li>
@@ -76,104 +55,23 @@ const Header = ({ handleHidden }) => {
               <li className="pt-4 pb-4">
                 <Link href="/about">
                   <a className="text-sm font-semibold text-white hover:text-blueGray-500">
-                    About Us
+                    한인회 활동
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/services">
                   <a className="text-sm font-semibold text-white hover:text-blueGray-500">
-                    Services
+                    한인회 소식
                   </a>
                 </Link>
               </li>
               <li className="group relative pt-4 pb-4 has-child">
                 <Link href="#">
                   <a className="text-sm font-semibold text-white hover:text-blueGray-500">
-                    Company
+                    FAQ
                   </a>
                 </Link>
-                <ul className="drop-down-menu min-w-200">
-                  <li>
-                    <Link href="/portfolio">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Portfolio
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/team">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Team
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/testimonials">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Testimonials
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/pricing">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Pricing
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/faqs">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Faqs
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/404">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        404
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-              <li className="group relative pt-4 pb-4 has-child">
-                <Link href="#">
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
-                    Blog
-                  </a>
-                </Link>
-                <ul className="drop-down-menu min-w-200">
-                  <li>
-                    <Link href="/blog">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Category 1
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog-2">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Category 2
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog-single">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Single 1
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/blog-single-2">
-                      <a className="menu-sub-item text-sm text-white hover:text-blueGray-500">
-                        Single 2
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/contact">
