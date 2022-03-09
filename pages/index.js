@@ -1,6 +1,8 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import TextEffect from '../components/elements/TextEffect';
+import Greetings from './greetings';
+import Footer from '../components/layout/Footer';
 
 const Home = () => {
   return (
@@ -31,6 +33,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+        <Greetings />
         <section className="py-20">
           <div className="container">
             <div className="max-w-2xl lg:max-w-3xl mx-auto">
@@ -132,6 +135,7 @@ const Home = () => {
           </div>
         </section>
       </Layout>
+      <Footer />
     </>
   );
 };

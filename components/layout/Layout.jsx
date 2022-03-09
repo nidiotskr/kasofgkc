@@ -40,7 +40,6 @@ const Layout = ({ children }) => {
         <Header handleHidden={handleHidden} />
         <MobileMenu hiddenClass={hiddenClass} handleRemove={handleRemove} />
         {children}
-        <Footer />
         <BackToTop />
       </div>
     </>
