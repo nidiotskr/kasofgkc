@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Preloader from '../components/elements/Preloader';
 import '../public/assets/css/animate.min.css';
-import '../public/assets/css/tailwind-built.css';
+import '../public/assets/css/tailwind-v3.css';
 import 'swiper/css';
 
 function MyApp({ Component, pageProps }) {

@@ -6,16 +6,16 @@ function Greetings() {
     <Layout>
       <section className="py-20">
         <div
-          className="container px-4 mx-auto wow animate__animated animate__fadeIn"
+          className="container max-w-4xl mx-auto wow animate__animated animate__fadeIn"
           data-wow-delay=".3s"
         >
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap items-center">
             <img
-              className="w-full lg:w-2/5 px-6 mx-3"
+              className="w-full sm:w-1/2 pr-6"
               src="/assets/imgs/placeholders/president_profile_picture.jpg"
               alt="PPP"
             />
-            <p className="w-full lg:w-3/5">
+            <p className="w-full sm:w-1/2">
               존경하는 캔사스 한인동포 여러분, <br></br>
               <br></br>2022년 임인년을 새해를 맞이하여 제34대 한인회가
               출범했습니다 먼저 코로나19가 또다른 오미크론이란 새로운 바이러스로
