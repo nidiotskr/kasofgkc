@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import TextEffect from '../components/elements/TextEffect';
-import Greetings from './greetings';
+import Greeting from './greeting';
 import Footer from '../components/layout/Footer';
 
 const Home = () => {
@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Layout>
         <section
-          className="pb-40 bg-center bg-cover bg-no-repeat relative -mt-24 pt-24"
+          className="pb-40 bg-center bg-cover bg-no-repeat relative -mt-24 pt-36"
           style={{
             backgroundImage: "url('assets/imgs/backgrounds/background6.jpg')",
           }}
@@ -33,7 +33,7 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <Greetings />
+        <Greeting />
         <section className="py-20">
           <div className="container">
             <div className="max-w-2xl lg:max-w-3xl mx-auto">
@@ -72,8 +72,7 @@ const Home = () => {
                   </svg>
                   <div className="leading-relaxed">
                     <span className="text-sm text-blueGray-400">Phone</span>
-                    <p>+ 48 654-430-309</p>
-                    <p>+ 1 6532-430-309</p>
+                    <p>+ 1 913 000 0000</p>
                   </div>
                 </div>
                 <div
@@ -96,8 +95,7 @@ const Home = () => {
                   </svg>
                   <div className="leading-relaxed">
                     <span className="text-sm text-blueGray-400">E-mail</span>
-                    <p>contact@monst.com</p>
-                    <p>pat@example.com</p>
+                    <p>contact@ksaofgkc.com</p>
                   </div>
                 </div>
                 <div
@@ -135,7 +133,6 @@ const Home = () => {
           </div>
         </section>
       </Layout>
-      <Footer />
     </>
   );
 };

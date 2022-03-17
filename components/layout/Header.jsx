@@ -31,15 +31,15 @@ const Header = ({ handleHidden }) => {
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
               <li className="group relative pt-4 pb-4 has-child">
                 <Link href="/">
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
+                  <a className="text-sm font-heading font-semibold text-white hover:text-blueGray-500">
                     한인회 소개
                   </a>
                 </Link>
                 <ul className="drop-down-menu min-w-200">
                   <li>
-                    <Link href="/">
+                    <Link href="/organization">
                       <a className="menu-sub-item text-sm text-black hover:text-blueGray-500">
-                        Drop-down-menu 1
+                        조직도
                       </a>
                     </Link>
                   </li>
@@ -81,14 +81,7 @@ const Header = ({ handleHidden }) => {
                 </Link>
               </li>
             </ul>
-            <div className="hidden lg:block">
-              <Link href="/login">
-                <a className="btn-accent hover-up-2">Log In</a>
-              </Link>
-              <Link href="/signup">
-                <a className="btn-primary hover-up-2">Sign Up</a>
-              </Link>
-            </div>
+            <div />
             <div className="lg:hidden">
               <button
                 className="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300"
