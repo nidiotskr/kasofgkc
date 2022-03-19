@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../components/layout/Layout';
 import TextEffect from '../components/elements/TextEffect';
 import Greeting from './greeting';
+import Poster from './index_poster';
 import Footer from '../components/layout/Footer';
 
 const Home = () => {
@@ -22,18 +23,12 @@ const Home = () => {
                   of <TextEffect text="Greater Kansas City" />
                 </h2>
               </div>
-              <div>
-                <a
-                  className="tracking-wide hover-up-2 inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-white text-center font-semibold leading-none bg-blue-400 hover:bg-blue-500 rounded wow animate__animated animate__fadeIn"
-                  href="#key-features"
-                >
-                  Subscribe
-                </a>
-              </div>
             </div>
           </div>
         </section>
         <Greeting />
+        <Poster />
+
         <section className="py-20">
           <div className="container">
             <div className="max-w-2xl lg:max-w-3xl mx-auto">
