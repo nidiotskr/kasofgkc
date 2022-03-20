@@ -10,7 +10,7 @@ function ImageGallery(props) {
 
   return (
     <Layout>
-      <section className="-mt-24 pt-40 pb-12 bg-slate-400">
+      <section className="-mt-24 pt-40 pb-12 bg-slate-500">
         <div className="container">
           <h1 className="text-2xl lg:text-5xl font-bold mb-5 wow animate__animated animate__fadeIn animated">
             한인회 활동
@@ -22,11 +22,13 @@ function ImageGallery(props) {
           {events.map(event => {
             return (
               <>
-                <div className="py-12 text-center">
-                  <h1 className="text-4xl">{event.eventName}</h1>
-                  <p className="text-sm">Event Description blah blah</p>
+                <div className="py-12 text-center wow animate__animated animate__fadeIn animated">
+                  <h1 className="text-4xl font-bold">
+                    {event.eventMeta.title}
+                  </h1>
+                  <p className="text-sm">{event.eventMeta.description}</p>
                 </div>
-                <div className="grid grid-cols-3 gap-4">
+                <div className="grid grid-cols-3 gap-4 wow animate__animated animate__fadeIn animated">
                   {event.imagePaths.map(imagePath => {
                     return (
                       <Image
@@ -55,7 +57,17 @@ export async function getStaticProps() {
 
   const events = eventNames.map(eventName => {
     const eventPath = path.join(rootPath, eventName);
-    const imageNames = fs.readdirSync(eventPath);
+    const fileNames = fs.readdirSync(eventPath);
+    const [eventMetaFileName] = fileNames.filter(fileName => {
+      return fileName.indexOf('.json') !== -1;
+    });
+    const eventMeta = JSON.parse(
+      fs.readFileSync(path.join(eventPath, eventMetaFileName)),
+    );
+    const imageNames = fileNames.filter(fileName => {
+      return fileName.indexOf('.json') == -1;
+    });
+
     const imagePaths = imageNames.map(imageName => {
       const imagePath = path.join(
         '/assets/imgs/activities',
@@ -67,6 +79,7 @@ export async function getStaticProps() {
 
     return {
       eventName,
+      eventMeta,
       imagePaths: imagePaths,
     };
   });
