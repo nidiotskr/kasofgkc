@@ -44,9 +44,9 @@ const Header = ({ handleHidden }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/index-2">
+                    <Link href="/presidents">
                       <a className="menu-sub-item text-sm text-black hover:text-blueGray-500">
-                        Drop-down-menu 2
+                        역대 회장
                       </a>
                     </Link>
                   </li>
@@ -63,13 +63,6 @@ const Header = ({ handleHidden }) => {
                 <Link href="/services">
                   <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     한인회 소식
-                  </a>
-                </Link>
-              </li>
-              <li className="group relative pt-4 pb-4 has-child">
-                <Link href="#">
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
-                    FAQ
                   </a>
                 </Link>
               </li>
