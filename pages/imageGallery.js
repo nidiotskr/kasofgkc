@@ -26,6 +26,7 @@ function ImageGallery(props) {
                   <h1 className="text-4xl font-bold">
                     {event.eventMeta.title}
                   </h1>
+                  <p className="text-sm">{event.eventMeta.date}</p>
                   <p className="text-sm">{event.eventMeta.description}</p>
                 </div>
                 <div className="grid grid-cols-3 gap-4 wow animate__animated animate__fadeIn animated">

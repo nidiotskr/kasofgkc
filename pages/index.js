@@ -29,7 +29,7 @@ const Home = () => {
         <Greeting />
         <Poster />
 
-        <section className="py-20">
+        <section id="contact-section" className="py-20">
           <div className="container">
             <div className="max-w-2xl lg:max-w-3xl mx-auto">
               <div className="mb-12 text-center">

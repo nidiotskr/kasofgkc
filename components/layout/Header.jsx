@@ -61,13 +61,13 @@ const Header = ({ handleHidden }) => {
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/news">
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-800">
                     한인회 소식
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
-                <Link href="/contact">
+                <Link href="#contact-section" scroll>
                   <a className="text-sm font-semibold text-white hover:text-blueGray-800">
                     Contact
                   </a>
