@@ -60,8 +60,8 @@ const Header = ({ handleHidden }) => {
                 </Link>
               </li>
               <li className="pt-4 pb-4">
-                <Link href="/services">
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-800">
+                <Link href="/news">
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     한인회 소식
                   </a>
                 </Link>
