@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
         ></script>
         <script>new WOW().init();</script>
       </Head>
-      <div className="main font-body text-body flex">
+      <div className="main font-body text-body">
         <Header handleHidden={handleHidden} />
         <MobileMenu hiddenClass={hiddenClass} handleRemove={handleRemove} />
         {children}
