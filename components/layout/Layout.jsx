@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <title>
-          KSAOFGKC - The Korean American Association of the greather Kansas City
+          KASOFGKC - The Korean American Association of the greather Kansas City
         </title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
