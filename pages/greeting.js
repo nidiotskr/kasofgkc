@@ -2,7 +2,7 @@ import React from 'react';
 
 function Greeting() {
   return (
-    <section className="py-12">
+    <section className="py-20">
       <div className="container max-w-4xl mx-auto">
         <div className="grid md:flex md:flex-row justify-items-center items-start">
           <img

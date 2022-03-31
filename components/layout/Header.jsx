@@ -31,7 +31,7 @@ const Header = ({ handleHidden }) => {
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
               <li className="group relative pt-4 pb-4 has-child">
                 <Link href="/">
-                  <a className="text-sm font-heading font-semibold text-white hover:text-blueGray-800">
+                  <a className="text-sm font-heading font-semibold text-white hover:text-blueGray-500">
                     한인회 소개
                   </a>
                 </Link>
@@ -54,21 +54,21 @@ const Header = ({ handleHidden }) => {
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/imageGallery">
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-800">
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     한인회 활동
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/news">
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-800">
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     한인회 소식
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
-                <Link href="#contact-section" scroll>
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-800">
+                <Link href="/#contact-section" scroll>
+                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
                     Contact
                   </a>
                 </Link>

@@ -37,7 +37,7 @@ const Home = () => {
                   className="text-4xl font-bold font-heading wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".1s"
                 >
-                  Get in touch!
+                  캔사스 한인회 연락하기
                 </h2>
                 <p
                   className="text-blueGray-400 wow animate__animated animate__fadeIn animated"
@@ -90,7 +90,7 @@ const Home = () => {
                   </svg>
                   <div className="leading-relaxed">
                     <span className="text-sm text-blueGray-400">E-mail</span>
-                    <p>contact@ksaofgkc.com</p>
+                    <p>kckasocity@gmail.com</p>
                   </div>
                 </div>
                 <div
@@ -119,8 +119,8 @@ const Home = () => {
                   </svg>
                   <div className="leading-relaxed">
                     <span className="text-sm text-blueGray-400">Address</span>
-                    <p>11567 E Broadview Dr</p>
-                    <p>Colorado(CO), 80117</p>
+                    <p>10322 Metcalf Ave</p>
+                    <p>Overland Park(KS), 66212</p>
                   </div>
                 </div>
               </div>

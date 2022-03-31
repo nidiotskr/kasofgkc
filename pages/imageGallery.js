@@ -10,9 +10,13 @@ function ImageGallery(props) {
 
   return (
     <Layout>
-      <section className="-mt-24 pt-40 pb-12 bg-slate-400">
+      <section className="-mt-24 pt-40 pb-12 bg-top bg-no-repeat bg-cover"
+          style={{
+            backgroundImage: "url('assets/imgs/backgrounds/background6.jpg')",
+          }}
+        >
         <div className="container">
-          <h1 className="text-2xl lg:text-5xl font-bold mb-5 wow animate__animated animate__fadeIn animated">
+          <h1 className="text-2xl lg:text-5xl text-white mb-5 wow animate__animated animate__fadeIn animated">
             한인회 활동
           </h1>
         </div>
@@ -22,12 +26,12 @@ function ImageGallery(props) {
           {events.map(event => {
             return (
               <>
-                <div className="py-12 text-center wow animate__animated animate__fadeIn animated">
+                <div className="py-20 text-center wow animate__animated animate__fadeIn animated">
                   <h1 className="text-4xl font-bold">
                     {event.eventMeta.title}
                   </h1>
                   <p className="text-sm">{event.eventMeta.date}</p>
-                  <p className="text-sm">{event.eventMeta.description}</p>
+                  <p className="pt-5 text-sm">{event.eventMeta.description}</p>
                 </div>
                 <div className="grid grid-cols-3 gap-4 wow animate__animated animate__fadeIn animated">
                   {event.imagePaths.map(imagePath => {
