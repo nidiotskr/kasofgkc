@@ -37,7 +37,7 @@ const News = () => {
                   </p>
                   <a
                     className="text-sm mb-2 font-bold font-heading text-xl hover:text-blue-800"
-                    href="/about"
+                    href="/news_template"
                   >
                     103rd Korean Independence Movement Day
                   </a>
