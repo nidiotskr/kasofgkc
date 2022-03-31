@@ -8,6 +8,12 @@ const news_template = () => {
   return (
     <>
       <Layout>
+        <section
+          className="-mt-24 pt-28 bg-top bg-no-repeat bg-cover"
+          style={{
+            backgroundImage: "url('assets/imgs/backgrounds/background6.jpg')",
+          }}
+        ></section>
         <section className="hero-3">
           <div className="container">
             <div className="flex flex-wrap items-center -mx-3">
