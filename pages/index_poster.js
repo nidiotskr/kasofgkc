@@ -2,7 +2,7 @@ import React from 'react';
 
 function Poster() {
   return (
-    <section className="-mt-24 pt-12 relative">
+    <section className="relative">
       <div className="bg-slate-100">
         <div className="flex justify-center py-20">
           <img

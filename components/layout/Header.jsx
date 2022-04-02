@@ -17,25 +17,30 @@ const Header = ({ handleHidden }) => {
       <header
         className={
           scroll
-            ? 'bg-blueGray-800 sticky-bar mt-4 stick'
-            : 'bg-transparent sticky-bar mt-4'
+            ? 'bg-theme-primary-200 sticky-bar mt-4 stick text-white'
+            : 'bg-transparent sticky-bar mt-4 text-white'
         }
       >
-        <div className="container bg-transparent">
-          <nav className="bg-transparent flex justify-between items-center py-3">
+        <div className="container">
+          <nav className="flex justify-between items-center py-3">
             <Link href="/">
-              <a className="text-3xl text-white font-semibold leading-none">
-                LOGO
-              </a>
+              <a className="text-3xl font-semibold leading-none">LOGO</a>
             </Link>
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
               <li className="group relative pt-4 pb-4 has-child">
                 <Link href="/">
-                  <a className="text-sm font-heading font-semibold text-white hover:text-blueGray-500">
+                  <a className="text-sm font-heading font-semibold hover:text-blueGray-500">
                     한인회 소개
                   </a>
                 </Link>
                 <ul className="drop-down-menu min-w-200">
+                  <li>
+                    <Link href="/greeting">
+                      <a className="menu-sub-item text-sm text-black hover:text-blueGray-800">
+                        취임사
+                      </a>
+                    </Link>
+                  </li>
                   <li>
                     <Link href="/organization">
                       <a className="menu-sub-item text-sm text-black hover:text-blueGray-800">
@@ -54,27 +59,31 @@ const Header = ({ handleHidden }) => {
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/imageGallery">
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
+                  <a className="text-sm font-semibold hover:text-blueGray-500">
                     한인회 활동
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/news">
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
+                  <a className="text-sm font-semibold hover:text-blueGray-500">
                     한인회 소식
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/#contact-section" scroll>
-                  <a className="text-sm font-semibold text-white hover:text-blueGray-500">
+                  <a className="text-sm font-semibold hover:text-blueGray-500">
                     Contact
                   </a>
                 </Link>
               </li>
             </ul>
-            <div />
+            <div className="hidden lg:block">
+              <Link href="/join">
+                <a className="btn-accent hover-up-2">Join</a>
+              </Link>
+            </div>
             <div className="lg:hidden">
               <button
                 className="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700 rounded border border-blue-200 hover:border-blue-300"
