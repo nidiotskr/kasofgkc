@@ -38,7 +38,7 @@ const Home = () => {
         <Poster />
         <section
           id="contact-section"
-          className="py-32 bg-theme-primary text-color-secondary"
+          className="pt-32 pb-16 bg-theme-primary text-color-secondary"
         >
           <div className="container">
             <div className="max-w-2xl lg:max-w-3xl mx-auto">
@@ -53,7 +53,7 @@ const Home = () => {
                   className="text-blueGray-400 wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".5s"
                 >
-                  We will be glad to hear from you
+                  We will be glad to hear from you!
                 </p>
               </div>
               <div className="flex flex-wrap -mx-3 text-center">
