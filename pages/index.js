@@ -1,9 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import TextEffect from '../components/elements/TextEffect';
-import Greeting from './greeting';
 import Poster from './index_poster';
-import Footer from '../components/layout/Footer';
 import Welcome from './welcome';
 
 const Home = () => {

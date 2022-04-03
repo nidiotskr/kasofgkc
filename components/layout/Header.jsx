@@ -17,7 +17,7 @@ const Header = ({ handleHidden }) => {
       <header
         className={
           scroll
-            ? 'bg-theme-primary-200 sticky-bar mt-4 stick text-white'
+            ? 'bg-theme-primary opacity-75 sticky-bar mt-4 stick text-white'
             : 'bg-transparent sticky-bar mt-4 text-white'
         }
       >
@@ -74,7 +74,7 @@ const Header = ({ handleHidden }) => {
               <li className="pt-4 pb-4">
                 <Link href="/#contact-section" scroll>
                   <a className="text-sm font-semibold hover:text-blueGray-500">
-                    Contact
+                    한인회 문의
                   </a>
                 </Link>
               </li>

@@ -8,7 +8,7 @@ const TextEffect = ({ text }) => {
     const typed = new Typed(el.current, {
       strings: [text],
       startDelay: 300,
-      typeSpeed: 100,
+      typeSpeed: 70,
     });
 
     return () => {
