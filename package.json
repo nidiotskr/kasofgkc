@@ -19,6 +19,7 @@
     "react-typing-effect": "^2.0.5",
     "react-visibility-sensor": "^5.1.1",
     "swiper": "^7.3.2",
+    "typed.js": "^2.0.12",
     "wowjs": "^1.1.3"
   },
   "devDependencies": {

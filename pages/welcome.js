@@ -12,7 +12,7 @@ const Welcome = () => {
           <br />
           <br />
           <br />
-          <span className="font-semibold text-6xl lg:text-8xl">
+          <span className="font-semibold text-5xl lg:text-7xl">
             환영합니다!
           </span>
         </p>

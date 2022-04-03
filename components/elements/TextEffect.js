@@ -1,11 +1,22 @@
-import React from 'react';
-import ReactTypingEffect from 'react-typing-effect';
+import Typed from 'typed.js';
+import { useEffect, useRef } from 'react';
+
 const TextEffect = ({ text }) => {
-  return (
-    <>
-      <ReactTypingEffect text={[text]} typingDelay={1000} speed={250} />
-    </>
-  );
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: [text],
+      startDelay: 300,
+      typeSpeed: 100,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
+  return <span ref={el} />;
 };
 
 export default TextEffect;

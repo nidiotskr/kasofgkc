@@ -18,17 +18,17 @@ const Home = () => {
         >
           <div className="container">
             <div className="py-12 mb-24">
-              <div className="w-full mx-auto mb-8">
-                <span className="text-color-primary text-5xl lg:text-7xl font-semibold font-heading">
+              <div className="w-full mx-auto mb-8 text-center">
+                <span className="text-color-primary text-6xl lg:text-8xl font-semibold font-heading">
                   캔사스 한인회
                 </span>
                 <br />
                 <br />
-                <h1 className="text-color-primary-200 text-2xl lg:text-4xl mb-4 font-semibold font-heading wow animate__animated animate__fadeIn">
-                  The Korean American Association of
+                <h1 className="text-color-primary-200 text-2xl lg:text-4xl mb-4 italic font-heading wow animate__animated animate__fadeIn">
+                  THE KOREAN AMERICAN ASSOCIATION OF
                 </h1>
-                <h1 className="text-color-primary-200 text-4xl lg:text-6xl font-semibold font-heading">
-                  <TextEffect text="Greater Kansas City" />
+                <h1 className="text-color-primary-200 text-4xl lg:text-6xl font-medium font-heading">
+                  <TextEffect text="GREATER KANSAS CITY" />
                 </h1>
               </div>
             </div>

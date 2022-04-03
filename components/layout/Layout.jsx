@@ -28,6 +28,10 @@ const Layout = ({ children }) => {
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+          rel="stylesheet"
+        ></link>
         <script
           src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"
           integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g=="
