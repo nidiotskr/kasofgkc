@@ -42,14 +42,14 @@ const Home = () => {
             <div className="max-w-2xl lg:max-w-3xl mx-auto">
               <div className="mb-12 text-center">
                 <h2
-                  className="text-4xl text-color-secondary font-bold font-heading wow animate__animated animate__fadeIn animated"
+                  className="text-3xl lg:text-5xl text-color-secondary font-bold font-heading wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".1s"
                 >
                   캔사스 한인회 연락하기
                 </h2>
                 <p
                   className="text-blueGray-400 wow animate__animated animate__fadeIn animated"
-                  data-wow-delay=".5s"
+                  data-wow-delay=".3s"
                 >
                   We will be glad to hear from you!
                 </p>

@@ -16,7 +16,7 @@ function Organization() {
           </h1>
         </div>
       </section>
-      <section className="py-16">
+      <section className="py-16 bg-slate-100">
         <div className="container max-w-4xl mx-auto">
           <div className="grid md:flex md:flex-row justify-items-center items-start">
             <img

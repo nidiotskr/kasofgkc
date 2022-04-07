@@ -253,6 +253,9 @@
 .text-color-secondary-100 {
 	color: #E8C01E
 }
+.hover\:text-color-secondary:hover {
+	color: #F5D042
+}
 .text-color-secondary-200 {
 	color: white
 }
