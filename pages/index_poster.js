@@ -23,7 +23,7 @@ function Poster() {
                 data-wow-delay=".5s"
               >
                 <img
-                  className="w-full object-cover rounded-xl shadow-lg"
+                  className="w-full object-cover rounded-md shadow-lg"
                   src="assets/imgs/posters/adaptive_sports_festival_2020ver.JPG"
                   alt="recent_news"
                 />
@@ -33,16 +33,6 @@ function Poster() {
         </div>
       </div>
     </section>
-    // <section className="relative">
-    //   <div className="bg-slate-100">
-    //     <div className="flex justify-center py-20">
-    //       <img
-    //         src="assets/imgs/posters/adaptive_sports_festival_2020ver.JPG"
-    //         alt="org_map"
-    //       />
-    //     </div>
-    //   </div>
-    // </section>
   );
 }
 

@@ -3,6 +3,7 @@ import Layout from '../components/layout/Layout';
 import TextEffect from '../components/elements/TextEffect';
 import Poster from './index_poster';
 import Welcome from './welcome';
+import Footer from '../components/layout/Footer';
 
 const Home = () => {
   return (
@@ -36,16 +37,16 @@ const Home = () => {
         <Poster />
         <section
           id="contact-section"
-          className="pt-32 pb-16 bg-theme-primary text-color-secondary"
+          className="pt-16 pb-6 lg:pt-36 lg:pb-24 bg-theme-primary text-color-secondary"
         >
           <div className="container">
             <div className="max-w-2xl lg:max-w-3xl mx-auto">
               <div className="mb-12 text-center">
                 <h2
-                  className="text-3xl lg:text-5xl text-color-secondary font-bold font-heading wow animate__animated animate__fadeIn animated"
+                  className="text-3xl lg:text-4xl text-color-secondary font-bold font-heading wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".1s"
                 >
-                  캔사스 한인회 연락하기
+                  캔사스 한인회 연락처
                 </h2>
                 <p
                   className="pt-2 text-blueGray-400 wow animate__animated animate__fadeIn animated"
@@ -136,6 +137,7 @@ const Home = () => {
           </div>
         </section>
       </Layout>
+      <Footer page="main" />
     </>
   );
 };

@@ -1,10 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Footer = () => {
+const Footer = props => {
+  const { page } = props;
   return (
     <>
-      <section className="py-20 bg-theme-primary">
+      <section
+        className={
+          page === 'main' ? 'py-8 bg-theme-primary' : 'py-16 bg-slate-200'
+        }
+      >
         <div
           className="container px-4 mx-auto wow animate__animated animate__fadeIn"
           data-wow-delay=".3s"

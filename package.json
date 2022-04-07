@@ -11,6 +11,7 @@
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
     "fs": "0.0.1-security",
+    "google-map-react": "^2.1.10",
     "next": "12.0.4",
     "react": "17.0.2",
     "react-countup": "^6.1.0",

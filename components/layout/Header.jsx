@@ -17,7 +17,7 @@ const Header = ({ handleHidden }) => {
       <header
         className={
           scroll
-            ? 'bg-theme-primary opacity-75 sticky-bar mt-4 stick text-white'
+            ? 'bg-theme-primary opacity-70 sticky-bar mt-4 stick text-white'
             : 'bg-transparent sticky-bar mt-4 text-white'
         }
       >
