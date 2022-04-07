@@ -10,23 +10,23 @@ const Home = () => {
     <>
       <Layout>
         <section
-          className="w-full h-screen pb-40 bg-center bg-cover bg-no-repeat -mt-24 pt-36"
+          className="w-full h-screen pb-40 bg-top 3xl:bg-center bg-cover bg-no-repeat -mt-24 pt-36"
           style={{
             backgroundImage: "url('assets/imgs/backgrounds/sunflower1.jpg')",
           }}
         >
           <div className="container">
             <div className="py-12 mb-24">
-              <div className="w-full mx-auto mb-8 text-center">
-                <span className="text-color-primary text-6xl lg:text-8xl font-semibold font-heading">
+              <div className="h-1/2 -pt-24 mx-auto mb-8 text-center">
+                <span className="text-color-primary text-6xl 2xl:text-8xl font-semibold font-heading">
                   캔사스 한인회
                 </span>
                 <br />
                 <br />
-                <h1 className="text-color-primary-200 text-2xl lg:text-4xl mb-4 italic font-heading wow animate__animated animate__fadeIn">
+                <h1 className="text-color-primary-200 text-2xl 2xl:text-4xl mb-4 italic font-heading wow animate__animated animate__fadeIn">
                   THE KOREAN AMERICAN ASSOCIATION OF
                 </h1>
-                <h1 className="text-color-primary-200 text-4xl lg:text-6xl font-medium font-heading">
+                <h1 className="text-color-primary-200 text-5xl 2xl:text-7xl font-medium font-heading">
                   <TextEffect text="GREATER KANSAS CITY" />
                 </h1>
               </div>
