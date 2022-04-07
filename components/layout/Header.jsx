@@ -78,6 +78,31 @@ const Header = ({ handleHidden }) => {
                   </a>
                 </Link>
               </li>
+              <li className="group relative pt-4 pb-4 has-child">
+                <a className="text-sm font-heading font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
+                  협력 기관
+                </a>
+                <ul className="drop-down-menu min-w-200">
+                  <li>
+                    <a className="menu-sub-item text-sm text-black hover:text-blueGray-800">
+                      기관1
+                    </a>
+                  </li>
+                  <li>
+                    <a className="menu-sub-item text-sm text-black hover:text-blueGray-800">
+                      기관2
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="http://www.naver.com"
+                      className="menu-sub-item text-sm text-black hover:text-blueGray-800"
+                    >
+                      기관3
+                    </a>
+                  </li>
+                </ul>
+              </li>
             </ul>
             <div className="hidden lg:block">
               <Link href="/join">

@@ -48,7 +48,7 @@ const Home = () => {
                   캔사스 한인회 연락하기
                 </h2>
                 <p
-                  className="text-blueGray-400 wow animate__animated animate__fadeIn animated"
+                  className="pt-2 text-blueGray-400 wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".3s"
                 >
                   We will be glad to hear from you!
