@@ -281,3 +281,10 @@
 	--tw-text-opacity: 1;
 	color: #F5D042
 }
+.mobile-transition {
+	transform: translateX(0);
+	transition: transform 0.3s linear;
+}
+.mobile-transition-hidden {
+	transform: translateX(-100%);
+}
