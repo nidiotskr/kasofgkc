@@ -1,7 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 function Poster() {
+  const { t } = useTranslation('poster');
+
   return (
     <section className="bg-slate-200">
       <div className="flex flex-col items-center py-12 lg:py-24 hover-up-5">
@@ -12,7 +15,7 @@ function Poster() {
               data-wow-delay=".3s"
             >
               <span className="font-heading font-semibold text-4xl lg:text-7xl">
-                UPCOMING EVENT
+                {t('event')}
               </span>
             </p>
           </div>

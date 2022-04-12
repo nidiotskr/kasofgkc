@@ -22,14 +22,14 @@ const Welcome = () => {
             {t('greeting2')}
           </span>
         </p>
-        <p
+        {/* <p
           className="text-center wow animate__animated animate__fadeIn"
           data-wow-delay=".7s"
         >
           <span className="font-heading font-semibold text-3xl lg:text-7xl">
             {t('greeting3')}
           </span>
-        </p>
+        </p> */}
       </div>
     </section>
   );

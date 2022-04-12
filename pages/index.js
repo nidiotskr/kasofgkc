@@ -56,7 +56,7 @@ const Home = () => {
                   className="pt-2 text-blueGray-400 wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".3s"
                 >
-                  We will be glad to hear from you!
+                  We will be glad to hear from you.
                 </p>
               </div>
               <div className="flex flex-col lg:flex-row items-center -mx-3 text-center">
@@ -150,6 +150,11 @@ export default Home;
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['home', 'header', 'greeting'])),
+    ...(await serverSideTranslations(locale, [
+      'home',
+      'header',
+      'greeting',
+      'poster',
+    ])),
   },
 });
