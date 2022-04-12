@@ -30,7 +30,7 @@ const News = () => {
                 <div className="p-8 bg-white shadow rounded">
                   <img
                     className="h-36 w-full object-cover object-top"
-                    src="/assets/imgs/posters/adaptive_sports_festival_2020ver.JPG"
+                    src="/assets/imgs/posters/장애인체전2022.png"
                     alt="Monst"
                   />
                   <p className="text-lg text-blueGray-400 leading-relaxed">
@@ -52,7 +52,7 @@ const News = () => {
                 <div className="p-8 bg-white shadow rounded">
                   <img
                     className="h-36 w-full object-cover object-top"
-                    src="/assets/imgs/posters/adaptive_sports_festival_2020ver.JPG"
+                    src="/assets/imgs/posters/장애인체전2022.png"
                     alt="Monst"
                   />
                   <p className="text-lg text-blueGray-400 leading-relaxed">
@@ -74,7 +74,7 @@ const News = () => {
                 <div className="p-8 bg-white shadow rounded">
                   <img
                     className="h-36 w-full object-cover object-top"
-                    src="/assets/imgs/posters/adaptive_sports_festival_2020ver.JPG"
+                    src="/assets/imgs/posters/장애인체전2022.png"
                     alt="Monst"
                   />
                   <p className="text-lg text-blueGray-400 leading-relaxed">
@@ -102,7 +102,7 @@ const News = () => {
                 <div className="p-8 bg-white shadow rounded">
                   <img
                     className="h-36 w-full object-cover object-top"
-                    src="/assets/imgs/posters/adaptive_sports_festival_2020ver.JPG"
+                    src="/assets/imgs/posters/장애인체전2022.png"
                     alt="Monst"
                   />
                   <p className="text-lg text-blueGray-400 leading-relaxed">
@@ -121,7 +121,7 @@ const News = () => {
                 <div className="p-8 bg-white shadow rounded">
                   <img
                     className="h-36 w-full object-cover object-top"
-                    src="/assets/imgs/posters/adaptive_sports_festival_2020ver.JPG"
+                    src="/assets/imgs/posters/장애인체전2022.png"
                     alt="Monst"
                   />
                   <p className="text-lg text-blueGray-400 leading-relaxed">
@@ -140,7 +140,7 @@ const News = () => {
                 <div className="p-8 bg-white shadow rounded">
                   <img
                     className="h-36 w-full object-cover object-top"
-                    src="/assets/imgs/posters/adaptive_sports_festival_2020ver.JPG"
+                    src="/assets/imgs/posters/장애인체전2022.png"
                     alt="Monst"
                   />
                   <p className="text-lg text-blueGray-400 leading-relaxed">

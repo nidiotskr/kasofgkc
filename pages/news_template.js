@@ -15,9 +15,9 @@ const news_template = props => {
     <>
       <Layout>
         <section
-          className="-mt-24 pt-28 bg-top bg-no-repeat bg-cover"
+          className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('assets/imgs/backgrounds/background6.jpg')",
+            backgroundImage: "url('assets/imgs/backgrounds/sunflower3.jpg')",
           }}
         ></section>
         <section className="hero-3">
