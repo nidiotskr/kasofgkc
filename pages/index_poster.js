@@ -1,22 +1,25 @@
 import React from 'react';
 import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
 
 function Poster() {
+  const { t } = useTranslation('poster');
+
   return (
     <section className="bg-slate-200">
-      <div className="flex flex-col items-center py-16 lg:py-24 hover-up-5">
+      <div className="flex flex-col items-center py-12 lg:py-24 hover-up-5">
         <div className="max-w-4xl">
-          <div className="w-full mb-12">
+          <div className="w-full mb-8 lg:mb-16">
             <p
               className="text-center wow animate__animated animate__fadeIn"
               data-wow-delay=".3s"
             >
-              <span className="font-heading font-semibold text-5xl lg:text-7xl">
-                UPCOMING EVENT
+              <span className="font-heading font-semibold text-4xl lg:text-7xl">
+                {t('event')}
               </span>
             </p>
           </div>
-          <div className="max-w-2xl px-4 mx-auto">
+          <div className="max-w-sm lg:max-w-3xl px-8 lg:px-16 mx-auto">
             <Link href="/blog-single">
               <div
                 className="wow animate__animated animate__fadeIn"
@@ -24,7 +27,7 @@ function Poster() {
               >
                 <img
                   className="w-full object-cover rounded-md shadow-lg"
-                  src="assets/imgs/posters/adaptive_sports_festival_2020ver.JPG"
+                  src="assets/imgs/posters/장애인체전2022.png"
                   alt="recent_news"
                 />
               </div>

@@ -4,13 +4,17 @@ import TextEffect from '../components/elements/TextEffect';
 import Poster from './index_poster';
 import Welcome from './welcome';
 import Footer from '../components/layout/Footer';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 const Home = () => {
+  const { t } = useTranslation('home');
+
   return (
     <>
       <Layout>
         <section
-          className="w-full h-screen pb-40 bg-center bg-cover bg-no-repeat -mt-24 pt-36"
+          className="w-full h-screen pb-40 bg-top 2xl:bg-center bg-cover bg-no-repeat -mt-24 pt-36"
           style={{
             backgroundImage: "url('assets/imgs/backgrounds/sunflower1.jpg')",
           }}
@@ -18,15 +22,16 @@ const Home = () => {
           <div className="container">
             <div className="py-12 mb-24">
               <div className="w-full mx-auto mb-8 text-center">
-                <span className="text-color-primary text-6xl lg:text-8xl font-semibold font-heading">
-                  캔사스 한인회
+                <div className="w-full h-full blur"></div>
+                <span className="text-color-primary bg-opacity-50 text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-semibold font-heading">
+                  캔사스시티 한인회
                 </span>
                 <br />
                 <br />
-                <h1 className="text-color-primary-200 text-2xl lg:text-4xl mb-4 italic font-heading wow animate__animated animate__fadeIn">
-                  THE KOREAN AMERICAN ASSOCIATION OF
+                <h1 className="text-color-primary-200 bg-opacity-50 text-lg sm:text-2xl lg:text-3xl 2xl:text-4xl mb-4 italic font-heading wow animate__animated animate__fadeIn">
+                  THE KOREAN AMERICAN SOCIETY OF
                 </h1>
-                <h1 className="text-color-primary-200 text-4xl lg:text-6xl font-medium font-heading">
+                <h1 className="text-color-primary-200 bg-opacity-50 text-2xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-medium font-heading">
                   <TextEffect text="GREATER KANSAS CITY" />
                 </h1>
               </div>
@@ -46,16 +51,16 @@ const Home = () => {
                   className="text-3xl lg:text-4xl text-color-secondary font-bold font-heading wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".1s"
                 >
-                  캔사스 한인회 연락처
+                  {t('contact')}
                 </h2>
                 <p
                   className="pt-2 text-blueGray-400 wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".3s"
                 >
-                  We will be glad to hear from you!
+                  We will be glad to hear from you.
                 </p>
               </div>
-              <div className="flex flex-wrap -mx-3 text-center">
+              <div className="flex flex-col lg:flex-row items-center -mx-3 text-center">
                 <div
                   className="w-1/2 lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".1s"
@@ -143,3 +148,14 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, [
+      'home',
+      'header',
+      'greeting',
+      'poster',
+    ])),
+  },
+});

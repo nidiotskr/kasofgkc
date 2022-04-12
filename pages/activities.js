@@ -7,7 +7,6 @@ import Footer from '../components/layout/Footer';
 
 function ImageGallery(props) {
   const events = props.events;
-  console.log(events);
 
   return (
     <>
@@ -26,26 +25,27 @@ function ImageGallery(props) {
         </section>
         <section className="bg-slate-100">
           <div className="container max-w-6xl">
-            <div className="flex justfy-center">
-              {events.map(event => {
+            <div className="flex flex-col justfy-center">
+              {events.map((event, i) => {
                 return (
-                  <div className="py-16 text-center wow animate__animated animate__fadeIn animated">
-                    <h1 className="text-4xl font-bold">
+                  <div
+                    className="py-16 text-center wow animate__animated animate__fadeIn animated"
+                    key={i}
+                  >
+                    <h1 className="text-3xl lg:text-4xl font-bold">
                       {event.eventMeta.title}
                     </h1>
-                    <p className="text-md">{event.eventMeta.date}</p>
-                    <p className="pt-5 text-sm">
-                      {event.eventMeta.description}
-                    </p>
-                    <div className="pt-12 grid grid-cols-3 gap-4 wow animate__animated animate__fadeIn animated">
-                      {event.imagePaths.map(imagePath => {
+                    <p className="text-sm lg:text-md">{event.eventMeta.date}</p>
+                    <div className="pt-12 grid grid-cols-2 lg:grid-cols-3 gap-2 wow animate__animated animate__fadeIn animated">
+                      {event.imagePaths.map((imagePath, i) => {
                         return (
                           <Image
+                            key={i}
                             className="rounded-sm"
                             src={imagePath}
                             alt={imagePath}
                             width={500}
-                            height={500}
+                            height={350}
                             quality={50}
                           ></Image>
                         );
@@ -67,7 +67,9 @@ export default ImageGallery;
 
 export async function getStaticProps() {
   const rootPath = path.join(process.cwd(), 'public/assets/imgs/activities');
-  const eventNames = fs.readdirSync(rootPath);
+  const eventNames = fs.readdirSync(rootPath).sort((a, b) => {
+    return b - a;
+  });
 
   const events = eventNames.map(eventName => {
     const eventPath = path.join(rootPath, eventName);

@@ -1,9 +1,12 @@
-import Link from 'next/link';
 import React from 'react';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 const Header = ({ handleHidden }) => {
   const [scroll, setScroll] = useState(0);
+
   useEffect(() => {
     document.addEventListener('scroll', () => {
       const scrollCheck = window.scrollY > 100;
@@ -12,6 +15,39 @@ const Header = ({ handleHidden }) => {
       }
     });
   });
+
+  const router = useRouter();
+
+  const handleLocaleChange = locale => {
+    router.push(router.route, router.asPath, {
+      locale: locale,
+    });
+  };
+
+  const { t } = useTranslation('header');
+
+  function LocaleButton() {
+    if (router.locale == 'ko') {
+      return (
+        <button
+          className="btn-accent hover-up-2"
+          onClick={() => handleLocaleChange('en')}
+        >
+          English
+        </button>
+      );
+    } else {
+      return (
+        <button
+          className="btn-accent hover-up-2"
+          onClick={() => handleLocaleChange('ko')}
+        >
+          Korean
+        </button>
+      );
+    }
+  }
+
   return (
     <>
       <header
@@ -29,8 +65,8 @@ const Header = ({ handleHidden }) => {
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
               <li className="group relative pt-4 pb-4 has-child">
                 <Link href="/">
-                  <a className="text-sm font-heading font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
-                    한인회 소개
+                  <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
+                    {t('about')}
                   </a>
                 </Link>
                 <ul className="drop-down-menu min-w-200">
@@ -60,27 +96,27 @@ const Header = ({ handleHidden }) => {
               <li className="pt-4 pb-4">
                 <Link href="/activities">
                   <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
-                    한인회 활동
+                    {t('activities')}
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/news">
                   <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
-                    한인회 소식
+                    {t('news')}
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/#contact-section" scroll>
                   <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
-                    한인회 문의
+                    {t('contact')}
                   </a>
                 </Link>
               </li>
               <li className="group relative pt-4 pb-4 has-child">
-                <a className="text-sm font-heading font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
-                  협력 기관
+                <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
+                  {t('organizations')}
                 </a>
                 <ul className="drop-down-menu min-w-200">
                   <li>
@@ -105,9 +141,7 @@ const Header = ({ handleHidden }) => {
               </li>
             </ul>
             <div className="hidden lg:block">
-              <Link href="/join">
-                <a className="btn-accent hover-up-2">Join</a>
-              </Link>
+              <LocaleButton />
             </div>
             <div className="lg:hidden">
               <button
