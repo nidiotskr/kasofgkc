@@ -1,10 +1,16 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
+import path from 'path';
+import fs from 'fs';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
+
 import Slider3 from '../components/slider/Slider3';
 import TextEffect from '../components/elements/TextEffect';
 import Link from 'next/link';
 
-const news_template = () => {
+const news_template = props => {
+  const events = props.events;
+  console.log(events);
   return (
     <>
       <Layout>
@@ -22,57 +28,74 @@ const news_template = () => {
           </div>
         </section>
         {/* Main */}
-        <section className="py-12 md:pt-20 md:pb-12" id="how-we-work">
-          <div className="container">
-            <div className="max-w-lg mx-auto mb-20 text-center">
-              <h3
-                className="my-3 text-3xl md:text-4xl text-blueGray-900 font-bold font-heading wow animate__animated animate__fadeIn"
-                data-wow-delay="0"
-              >
-                103rd Korean Independence Movement Day
-              </h3>
-              <p
-                className="text-blueGray-400 wow animate__animated animate__fadeIn"
-                data-wow-delay=".3s"
-              >
-                March 19, 2022
-              </p>
-            </div>
-            <div
-              className="flex flex-col justify-center relative max-w-6xl mx-auto bg-indigo-50 wow animate__animated animate__fadeIn"
-              data-wow-delay=".3s"
-            >
-              <img
-                className="m-12"
-                src="/assets/imgs/posters/adaptive_sports_festival_2020ver.JPG"
-                alt="Monst"
-              />
+        {events.map(event => {
+          return (
+            <section className="py-12 md:pt-20 md:pb-12" id="how-we-work">
+              <div className="container">
+                <div className="max-w-lg mx-auto mb-20 text-center">
+                  <h3
+                    className="my-3 text-3xl md:text-4xl text-blueGray-900 font-bold font-heading wow animate__animated animate__fadeIn"
+                    data-wow-delay="0"
+                  >
+                    {event.eventMeta.title}
+                  </h3>
+                  <p
+                    className="text-blueGray-400 wow animate__animated animate__fadeIn"
+                    data-wow-delay=".3s"
+                  >
+                    {event.eventMeta.date}
+                  </p>
+                </div>
+                <div
+                  className="flex flex-col justify-center relative max-w-6xl mx-auto bg-slate-200 wow animate__animated animate__fadeIn"
+                  data-wow-delay=".3s"
+                >
+                  <img
+                    className="m-12"
+                    src={event.eventMeta.img_path}
+                    alt="Monst"
+                  />
 
-              <p
-                className="text-slate-500 mx-24 mb-12 wow animate__animated animate__fadeIn"
-                data-wow-delay=".4s"
-              >
-                On the other hand, we denounce with righteous indignation and
-                dislike men who are so beguiled and demoralized by the charms of
-                pleasure of the moment, so blinded by desire, that they cannot
-                foresee the pain and trouble that are bound to ensue; and equal
-                blame belongs to those who fail in their duty through weakness
-                of will, which is the same as saying through shrinking from toil
-                and pain. These cases are perfectly simple and easy to
-                distinguish. In a free hour, when our power of choice is
-                untrammelled and when nothing prevents our being able to do what
-                we like best, every pleasure is to be welcomed and every pain
-                avoided. But in certain circumstances and owing to the claims of
-                duty or the obligations of business it will frequently occur
-                that pleasures have to be repudiated and annoyances accepted.
-                The wise man therefore always holds in these matters to this
-                principle of selection: he rejects pleasures to secure other
-                greater pleasures, or else he endures pains to avoid worse
-                pains.
-              </p>
-            </div>
-          </div>
-        </section>
+                  <p
+                    className="text-slate-500 mx-24 mb-12 wow animate__animated animate__fadeIn"
+                    data-wow-delay=".4s"
+                  >
+                    {event.eventMeta.description}
+                  </p>
+
+                  {/* Buttons */}
+                  <div>
+                    <nav
+                      className="flex justify-between rounded-md shadow-sm -space-x-px"
+                      aria-label="Pagination"
+                    >
+                      <a
+                        href="/news/0"
+                        className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                      >
+                        <span className="sr-only">Previous</span>
+                        <ChevronLeftIcon
+                          className="h-10 w-10"
+                          aria-hidden="true"
+                        />
+                      </a>
+                      <a
+                        href="/news/2"
+                        className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                      >
+                        <span className="sr-only">Next</span>
+                        <ChevronRightIcon
+                          className="h-10 w-10"
+                          aria-hidden="true"
+                        />
+                      </a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </section>
+          );
+        })}
 
         {/* newsletter subscription */}
         <section
@@ -129,3 +152,39 @@ const news_template = () => {
 };
 
 export default news_template;
+
+export async function getStaticProps() {
+  const rootPath = path.join(process.cwd(), 'public/assets/imgs/news');
+  const eventNames = fs.readdirSync(rootPath);
+
+  const events = eventNames.map(eventName => {
+    const eventPath = path.join(rootPath, eventName);
+    const fileNames = fs.readdirSync(eventPath);
+    const [eventMetaFileName] = fileNames.filter(fileName => {
+      return fileName.indexOf('.json') !== -1;
+    });
+    const eventMeta = JSON.parse(
+      fs.readFileSync(path.join(eventPath, eventMetaFileName)),
+    );
+    const imageNames = fileNames.filter(fileName => {
+      return fileName.indexOf('.json') == -1;
+    });
+
+    const imagePaths = imageNames.map(imageName => {
+      const imagePath = path.join('/assets/imgs/news', eventName, imageName);
+      return imagePath;
+    });
+
+    return {
+      eventName,
+      eventMeta,
+      imagePaths: imagePaths,
+    };
+  });
+
+  return {
+    props: {
+      events,
+    },
+  };
+}

@@ -6,17 +6,18 @@ const News = () => {
   return (
     <>
       <Layout>
-      <section className="-mt-24 pt-40 pb-12 bg-top bg-no-repeat bg-cover"
+        <section
+          className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('assets/imgs/backgrounds/background6.jpg')",
+            backgroundImage: "url('assets/imgs/backgrounds/sunflower3.jpg')",
           }}
         >
-        <div className="container">
-          <h1 className="text-2xl lg:text-5xl text-white mb-5 wow animate__animated animate__fadeIn animated">
-            한인회 소식
-          </h1>
-        </div>
-      </section>
+          <div className="container">
+            <h1 className="text-3xl text-center lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
+              한인회 활동
+            </h1>
+          </div>
+        </section>
 
         <section className="pt-12 pb-24 bg-blueGray-50">
           <div className="container">
