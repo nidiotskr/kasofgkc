@@ -25,7 +25,7 @@ function ImageGallery(props) {
         </section>
         <section className="bg-slate-100">
           <div className="container max-w-6xl">
-            <div className="flex justfy-center">
+            <div className="flex flex-col justfy-center">
               {events.map((event, i) => {
                 return (
                   <div
@@ -67,7 +67,9 @@ export default ImageGallery;
 
 export async function getStaticProps() {
   const rootPath = path.join(process.cwd(), 'public/assets/imgs/activities');
-  const eventNames = fs.readdirSync(rootPath);
+  const eventNames = fs.readdirSync(rootPath).sort((a, b) => {
+    return b - a;
+  });
 
   const events = eventNames.map(eventName => {
     const eventPath = path.join(rootPath, eventName);
