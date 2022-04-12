@@ -1,4 +1,8 @@
+import { useTranslation } from 'next-i18next';
+
 const Welcome = () => {
+  const { t } = useTranslation('greeting');
+
   return (
     <section className="py-24 lg:py-40 bg-theme-primary text-color-secondary">
       <div className="container max-w-4xl">
@@ -7,7 +11,7 @@ const Welcome = () => {
           data-wow-delay=".3s"
         >
           <span className="font-heading font-semibold text-2xl lg:text-6xl">
-            캔사스시티 한인회에
+            {t('greeting1')}
           </span>
         </p>
         <p
@@ -15,7 +19,7 @@ const Welcome = () => {
           data-wow-delay=".5s"
         >
           <span className="font-heading font-semibold text-2xl lg:text-6xl">
-            방문하신 것을
+            {t('greeting2')}
           </span>
         </p>
         <p
@@ -23,7 +27,7 @@ const Welcome = () => {
           data-wow-delay=".7s"
         >
           <span className="font-heading font-semibold text-3xl lg:text-7xl">
-            환영합니다!
+            {t('greeting3')}
           </span>
         </p>
       </div>

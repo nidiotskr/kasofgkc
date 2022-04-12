@@ -23,7 +23,7 @@ const MobileMenu = ({ hiddenClass, handleRemove }) => {
     <>
       <div className={`${hiddenClass} relative z-50`}>
         <div className="fixed inset-0 bg-blueGray-800 opacity-80"></div>
-        <nav className="fixed opacity-80 top-24 left-0 bottom-0 flex flex-col w-full max-w-sm py-6 px-6 bg-theme-primary border-r overflow-y-auto">
+        <nav className="fixed opacity-80 top-24 left-0 bottom-0 flex flex-col w-full max-w-sm py-6 px-6 bg-theme-primary border-r overflow-y-auto mobile-transition">
           <div className="flex items-center">
             <a className="mr-auto" />
             <button className="navbar-close" onClick={handleRemove}>

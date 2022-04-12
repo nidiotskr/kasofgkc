@@ -4,8 +4,12 @@ import TextEffect from '../components/elements/TextEffect';
 import Poster from './index_poster';
 import Welcome from './welcome';
 import Footer from '../components/layout/Footer';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 const Home = () => {
+  const { t } = useTranslation('home');
+
   return (
     <>
       <Layout>
@@ -46,7 +50,7 @@ const Home = () => {
                   className="text-3xl lg:text-4xl text-color-secondary font-bold font-heading wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".1s"
                 >
-                  캔사스시티 한인회 연락처
+                  {t('contact')}
                 </h2>
                 <p
                   className="pt-2 text-blueGray-400 wow animate__animated animate__fadeIn animated"
@@ -143,3 +147,9 @@ const Home = () => {
 };
 
 export default Home;
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ['home', 'header', 'greeting'])),
+  },
+});

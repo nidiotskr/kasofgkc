@@ -7,7 +7,6 @@ import Footer from '../components/layout/Footer';
 
 function ImageGallery(props) {
   const events = props.events;
-  console.log(events);
 
   return (
     <>
@@ -27,17 +26,21 @@ function ImageGallery(props) {
         <section className="bg-slate-100">
           <div className="container max-w-6xl">
             <div className="flex justfy-center">
-              {events.map(event => {
+              {events.map((event, i) => {
                 return (
-                  <div className="py-16 text-center wow animate__animated animate__fadeIn animated">
+                  <div
+                    className="py-16 text-center wow animate__animated animate__fadeIn animated"
+                    key={i}
+                  >
                     <h1 className="text-3xl lg:text-4xl font-bold">
                       {event.eventMeta.title}
                     </h1>
                     <p className="text-sm lg:text-md">{event.eventMeta.date}</p>
                     <div className="pt-12 grid grid-cols-2 lg:grid-cols-3 gap-2 wow animate__animated animate__fadeIn animated">
-                      {event.imagePaths.map(imagePath => {
+                      {event.imagePaths.map((imagePath, i) => {
                         return (
                           <Image
+                            key={i}
                             className="rounded-sm"
                             src={imagePath}
                             alt={imagePath}

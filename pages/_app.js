@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { appWithTranslation } from 'next-i18next';
 import Preloader from '../components/elements/Preloader';
 import '../public/assets/css/animate.min.css';
 import '../public/assets/css/tailwind-v3.css';
@@ -15,4 +16,4 @@ function MyApp({ Component, pageProps }) {
   return <>{!loading ? <Component {...pageProps} /> : <Preloader />}</>;
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);
