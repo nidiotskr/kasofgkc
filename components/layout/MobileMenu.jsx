@@ -28,7 +28,7 @@ const MobileMenu = ({ hiddenClass, handleRemove }) => {
             <a className="mr-auto" />
             <button className="navbar-close" onClick={handleRemove}>
               <svg
-                className="h-6 w-6 text-color-secondary cursor-pointer hover:text-blue-500"
+                className="h-6 w-6 text-color-secondary hover:text-color-secondary"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"

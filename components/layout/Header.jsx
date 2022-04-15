@@ -64,34 +64,11 @@ const Header = ({ handleHidden }) => {
             </Link>
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
               <li className="group relative pt-4 pb-4 has-child">
-                <Link href="/">
+                <Link href="/about">
                   <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
                     {t('about')}
                   </a>
                 </Link>
-                <ul className="drop-down-menu min-w-200">
-                  <li>
-                    <Link href="/greeting">
-                      <a className="menu-sub-item text-sm text-black hover:text-blueGray-800">
-                        취임사
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/organization">
-                      <a className="menu-sub-item text-sm text-black hover:text-blueGray-800">
-                        조직도
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/presidents">
-                      <a className="menu-sub-item text-sm text-black hover:text-blueGray-800">
-                        역대 회장
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/activities">

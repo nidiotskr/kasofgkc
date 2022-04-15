@@ -19,10 +19,13 @@ const Footer = props => {
               &copy; 2022. Nidiots. All rights reserved.
             </p>
             <div className="order-first lg:order-last -mx-2 mb-4 lg:mb-0">
-              <a className="inline-block px-2" href="https://facebook.com">
+              <a
+                className="inline-block px-2"
+                href="https://www.facebook.com/kasofgkc/"
+              >
                 <img src="/assets/imgs/icons/facebook-blue.svg" alt="Nidiots" />
               </a>
-              <a className="inline-block px-2" href="https://twitter.com">
+              {/* <a className="inline-block px-2" href="https://twitter.com">
                 <img src="/assets/imgs/icons/twitter-blue.svg" alt="Nidiots" />
               </a>
               <a className="inline-block px-2" href="https://www.instagram.com">
@@ -30,7 +33,7 @@ const Footer = props => {
                   src="/assets/imgs/icons/instagram-blue.svg"
                   alt="Nidiots"
                 />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
