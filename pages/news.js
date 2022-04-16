@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import News_card from './news_card';
+import News_card from './news/news_card';
 import path from 'path';
 import fs from 'fs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -8,7 +8,6 @@ import { useTranslation } from 'next-i18next';
 
 const News = props => {
   const events = props.events;
-  console.log(events);
   return (
     <>
       <Layout>
@@ -24,7 +23,6 @@ const News = props => {
             </h1>
           </div>
         </section>
-
         <section className="pt-12 pb-24 bg-blueGray-50">
           <div className="container">
             <div className="flex flex-wrap items-center justify-between max-w-2xl lg:max-w-full mb-12"></div>
