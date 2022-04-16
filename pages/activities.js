@@ -4,8 +4,10 @@ import fs from 'fs';
 import Image from 'next/image';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
-function ImageGallery(props) {
+function Activities(props) {
   const events = props.events;
 
   return (
@@ -14,7 +16,7 @@ function ImageGallery(props) {
         <section
           className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('assets/imgs/backgrounds/sunflower3.jpg')",
+            backgroundImage: "url('/assets/imgs/backgrounds/sunflower3.jpg')",
           }}
         >
           <div className="container">
@@ -63,9 +65,9 @@ function ImageGallery(props) {
   );
 }
 
-export default ImageGallery;
+export default Activities;
 
-export async function getStaticProps() {
+export const getStaticProps = async ({ locale }) => {
   const rootPath = path.join(process.cwd(), 'public/assets/imgs/activities');
   const eventNames = fs.readdirSync(rootPath).sort((a, b) => {
     return b - a;
@@ -103,6 +105,12 @@ export async function getStaticProps() {
   return {
     props: {
       events,
+      ...(await serverSideTranslations(locale, [
+        'home',
+        'header',
+        'greeting',
+        'poster',
+      ])),
     },
   };
-}
+};

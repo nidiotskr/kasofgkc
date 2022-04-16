@@ -3,7 +3,8 @@ import Layout from '../components/layout/Layout';
 import News_card from './news_card';
 import path from 'path';
 import fs from 'fs';
-import Link from 'next/link';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 const News = props => {
   const events = props.events;
@@ -14,7 +15,7 @@ const News = props => {
         <section
           className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('assets/imgs/backgrounds/sunflower3.jpg')",
+            backgroundImage: "url('/assets/imgs/backgrounds/sunflower3.jpg')",
           }}
         >
           <div className="container">
@@ -40,7 +41,7 @@ const News = props => {
 
 export default News;
 
-export async function getStaticProps() {
+export const getStaticProps = async ({ locale }) => {
   const rootPath = path.join(process.cwd(), 'public/assets/imgs/news');
   const eventNames = fs.readdirSync(rootPath);
 
@@ -72,6 +73,12 @@ export async function getStaticProps() {
   return {
     props: {
       events,
+      ...(await serverSideTranslations(locale, [
+        'home',
+        'header',
+        'greeting',
+        'poster',
+      ])),
     },
   };
-}
+};

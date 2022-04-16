@@ -1,15 +1,19 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import Footer from '../components/layout/Footer';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
-const Intro = () => {
+const About = () => {
+  const { t } = useTranslation('about');
+
   return (
     <>
       <Layout>
         <section
           className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('assets/imgs/backgrounds/sunflower3.jpg')",
+            backgroundImage: "url('/assets/imgs/backgrounds/sunflower3.jpg')",
           }}
         >
           <div className="container">
@@ -18,7 +22,7 @@ const Intro = () => {
             </h1>
           </div>
         </section>
-        <section className="pt-24 bg-slate-100">
+        <section className="pt-24 bg-slate-200">
           <div className="container max-w-4xl mx-8">
             <h1
               className="text-3xl text-center lg:text-5xl mb-5 wow animate__animated animate__fadeIn animated"
@@ -99,6 +103,77 @@ const Intro = () => {
             </div>
           </div>
         </section>
+        <section className="py-24 bg-slate-100">
+          <div className="container lg:w-2/3 max-w-4xl">
+            <div className="flex flex-col lg:flex-row justify-center justify-items-center items-center mx-4 lg:mx-8">
+              <div className="basis-1/3 mr-8">
+                <h1
+                  className="font-heading mb-12 font-semibold text-2xl text-center lg:text-4xl wow animate__animated animate__fadeIn animated"
+                  data-wow-delay=".2s"
+                >
+                  한인회
+                  <br />
+                  <br /> 비전과 미션
+                </h1>
+              </div>
+              <div className="basis-2/3 lg:mr-12">
+                <div
+                  className="flex flex-row items-center wow animate__animated animate__fadeIn animated"
+                  data-wow-delay=".2s"
+                >
+                  <div className="w-8 mb-5">
+                    <span className="py-2 px-3 text-xs font-semibold bg-theme-primary text-white rounded">
+                      1
+                    </span>
+                  </div>
+                  <h2 className="font-heading font-semibold text-xl mb-4 ml-2">
+                    비전
+                  </h2>
+                </div>
+                <ul
+                  className="mb-8 wow animate__animated animate__fadeIn animated"
+                  data-wow-delay=".4s"
+                >
+                  <li>
+                    캔사스시티 한인회는 지속적인 혁신을 통하여 한인사회의
+                    지위향상과 한인문화창달 및 계승과 국제친선을 선도하는
+                    기관으로 구현한다.
+                  </li>
+                </ul>
+                <div
+                  className="flex flex-row items-center wow animate__animated animate__fadeIn animated"
+                  data-wow-delay=".6s"
+                >
+                  <div className="w-8 mb-5">
+                    <span className="py-2 px-3 text-xs font-semibold bg-theme-primary text-white rounded">
+                      2
+                    </span>
+                  </div>
+                  <h2 className="font-heading font-semibold text-xl mb-4 ml-2">
+                    미션
+                  </h2>
+                </div>
+                <ul
+                  className="mb-4 wow animate__animated animate__fadeIn animated"
+                  data-wow-delay=".8s"
+                >
+                  <li className="mb-3">
+                    캔사스시티한인회는 회원간의 친목과 화합, 유대강화의 일환으로
+                    한인회관 건립을 적극 추진한다.
+                  </li>
+                  <li className="mb-3">
+                    캔사스시티한인회의 공동이익과 지위향상을 추구하며 직종별.
+                    세대별 차이를 개선하여 소통과 화합을 이루도록 노력한다.
+                  </li>
+                  <li>
+                    캔사스시티한인회는 봉사단체로써 책임과 전문성 있는 기관으로
+                    미주류사회 정치, 문화행사에 적극 참여한다.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="pt-24">
           <div className="container max-w-4xl mx-auto">
             <h1
@@ -109,7 +184,7 @@ const Intro = () => {
             </h1>
             <div className="flex justify-center">
               <img
-                src="assets/imgs/placeholders/org_map_v1.svg"
+                src="/assets/imgs/placeholders/org_map_v1.svg"
                 alt="org_map"
               />
             </div>
@@ -121,4 +196,15 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default About;
+
+export const getStaticProps = async ({ locale }) => ({
+  props: {
+    ...(await serverSideTranslations(locale, [
+      'home',
+      'header',
+      'greeting',
+      'poster',
+    ])),
+  },
+});
