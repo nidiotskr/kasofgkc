@@ -1,16 +1,14 @@
 import React from 'react';
-import Layout from '../components/layout/Layout';
-import path from 'path';
-import fs from 'fs';
+
+import Layout from '../../components/layout/Layout';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
-import Slider3 from '../components/slider/Slider3';
-import TextEffect from '../components/elements/TextEffect';
-import Link from 'next/link';
+import path from 'path';
+import fs from 'fs';
 
-const news_template = props => {
+export default function DynamicPage(props) {
   const events = props.events;
-  console.log(events);
+  const [event] = events;
   return (
     <>
       <Layout>
@@ -53,7 +51,7 @@ const news_template = props => {
                 >
                   <img
                     className="m-12"
-                    src={event.eventMeta.img_path}
+                    src={event.eventMeta.img_path2}
                     alt="Monst"
                   />
 
@@ -150,9 +148,7 @@ const news_template = props => {
       </Layout>
     </>
   );
-};
-
-export default news_template;
+}
 
 export async function getStaticProps() {
   const rootPath = path.join(process.cwd(), 'public/assets/imgs/news');
@@ -188,4 +184,13 @@ export async function getStaticProps() {
       events,
     },
   };
+}
+
+export async function getStaticPaths() {
+  const posts = ['a', 'b'];
+  const paths = posts.map(post => ({
+    params: { slug: post },
+  }));
+
+  return { paths, fallback: false };
 }
