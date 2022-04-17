@@ -24,12 +24,12 @@ const About = () => {
         </section>
         <section className="pt-24 bg-slate-200">
           <div className="container max-w-4xl mx-8">
-            <h1
+            <h2
               className="text-3xl text-center lg:text-5xl mb-5 wow animate__animated animate__fadeIn animated"
               data-wow-delay=".3s"
             >
               제34대 한인회장 취임사
-            </h1>
+            </h2>
             <div className="pb-16 grid justify-items-center items-start">
               <div
                 className="wow animate__animated animated__fadeIn"
@@ -107,14 +107,14 @@ const About = () => {
           <div className="container lg:w-2/3 max-w-4xl">
             <div className="flex flex-col lg:flex-row justify-center justify-items-center items-center mx-4 lg:mx-8">
               <div className="basis-1/3 mr-8">
-                <h1
+                <h2
                   className="font-heading mb-12 font-semibold text-2xl text-center lg:text-4xl wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".2s"
                 >
                   한인회
                   <br />
                   <br /> 비전과 미션
-                </h1>
+                </h2>
               </div>
               <div className="basis-2/3 lg:mr-12">
                 <div
@@ -176,12 +176,12 @@ const About = () => {
         </section>
         <section className="pt-24">
           <div className="container max-w-4xl mx-auto">
-            <h1
+            <h2
               className="font-heading text-3xl text-center lg:text-5xl mb-5 wow animate__animated animate__fadeIn animated"
               data-wow-delay=".1s"
             >
               한인회 조직도
-            </h1>
+            </h2>
             <div className="flex justify-center">
               <img
                 src="/assets/imgs/placeholders/org_map_v1.svg"

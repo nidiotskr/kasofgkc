@@ -34,9 +34,9 @@ function Activities(props) {
                     className="py-16 text-center wow animate__animated animate__fadeIn animated"
                     key={i}
                   >
-                    <h1 className="text-3xl lg:text-4xl font-bold">
+                    <h2 className="text-3xl lg:text-4xl font-bold">
                       {event.eventMeta.title}
-                    </h1>
+                    </h2>
                     <p className="text-sm lg:text-md">{event.eventMeta.date}</p>
                     <div className="pt-12 grid grid-cols-2 lg:grid-cols-3 gap-2 wow animate__animated animate__fadeIn animated">
                       {event.imagePaths.map((imagePath, i) => {

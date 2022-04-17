@@ -20,8 +20,17 @@ const Layout = ({ children }) => {
     <>
       <Head>
         <title>
-          KASOFGKC - The Korean American Association of the greather Kansas City
+          캔사스시티 한인회 - The Korean American Association of Greather Kansas
+          City
         </title>
+        <meta charset="utf-8" />
+        <meta
+          name="description"
+          content="캔사스시티 한인회 - The Korean American Association of Greather Kansas
+          City"
+        />
+        <meta name="keywords" content="캔사스시티, 한인회, KASGKC, Korean" />
+        <meta name="author" content="Nidiots" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link

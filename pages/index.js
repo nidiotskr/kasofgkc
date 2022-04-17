@@ -23,14 +23,14 @@ const Home = () => {
             <div className="py-12 mb-24">
               <div className="w-full mx-auto mb-8 text-center">
                 <div className="w-full h-full ">
-                  <span className="text-color-primary bg-opacity-50 text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-semibold font-heading">
+                  <h1 className="text-color-primary bg-opacity-50 text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-semibold font-heading">
                     캔사스시티 한인회
-                  </span>
-                  <br />
-                  <br />
-                  <h1 className="text-color-primary-200 bg-opacity-50 text-lg sm:text-2xl lg:text-3xl 2xl:text-4xl mb-4 italic font-heading wow animate__animated animate__fadeIn">
-                    THE KOREAN AMERICAN SOCIETY OF
                   </h1>
+                  <br />
+                  <br />
+                  <h2 className="text-color-primary-200 bg-opacity-50 text-lg sm:text-2xl lg:text-3xl 2xl:text-4xl mb-4 italic font-heading wow animate__animated animate__fadeIn">
+                    THE KOREAN AMERICAN SOCIETY OF
+                  </h2>
                   <h1 className="text-color-primary-200 bg-opacity-50 text-2xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-medium font-heading">
                     <TextEffect text="GREATER KANSAS CITY" />
                   </h1>
