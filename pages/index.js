@@ -157,6 +157,7 @@ export const getStaticProps = async ({ locale }) => ({
       'header',
       'greeting',
       'poster',
+      'mobilemenu',
     ])),
   },
 });

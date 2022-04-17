@@ -1,11 +1,45 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 const MobileMenu = ({ hiddenClass, handleRemove }) => {
   const [isActive, setIsActive] = useState({
     status: false,
     key: '',
   });
+
+  const { t } = useTranslation('mobilemenu');
+
+  const router = useRouter();
+
+  const handleLocaleChange = locale => {
+    router.push(router.route, router.asPath, {
+      locale: locale,
+    });
+  };
+
+  function LocaleButton() {
+    if (router.locale == 'ko') {
+      return (
+        <button
+          className="m-4 underline underline-offset-1 text-color-secondary"
+          onClick={() => handleLocaleChange('en')}
+        >
+          English
+        </button>
+      );
+    } else {
+      return (
+        <button
+          className="m-4 underline underline-offset-1 text-color-secondary"
+          onClick={() => handleLocaleChange('ko')}
+        >
+          Korean
+        </button>
+      );
+    }
+  }
 
   const handleToggle = key => {
     if (isActive.key === key) {
@@ -19,6 +53,7 @@ const MobileMenu = ({ hiddenClass, handleRemove }) => {
       });
     }
   };
+
   return (
     <>
       <div className={`${hiddenClass} relative z-50`}>
@@ -45,118 +80,57 @@ const MobileMenu = ({ hiddenClass, handleRemove }) => {
           </div>
           <div>
             <ul className="mobile-menu">
-              <li
-                className={
-                  isActive.key == 1
-                    ? 'mb-1 menu-item-has-children rounded-xl active'
-                    : 'mb-1 menu-item-has-children rounded-xl'
-                }
-                onClick={() => handleToggle(1)}
-              >
-                <span className="menu-expand text-color-secondary">+</span>
+              <LocaleButton />
+              <li className="mb-1 rounded-xl">
                 <Link href="/">
                   <a className="block p-4 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                    Home
+                    {t('home')}
                   </a>
                 </Link>
-                <ul className={isActive.key == 1 ? 'dropdown pl-5' : 'hidden'}>
-                  <li>
-                    <Link href="/index">
-                      <a className="block p-3 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                        Home 1
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-2">
-                      <a className="block p-3 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                        Home 2
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-3">
-                      <a className="block p-3 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                        Home 3
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-4">
-                      <a className="block p-3 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                        Home 4
-                      </a>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href="/index-5">
-                      <a className="block p-3 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                        Home 5
-                      </a>
-                    </Link>
-                  </li>
-                </ul>
               </li>
               <li className="mb-1 rounded-xl">
                 <Link href="/about">
                   <a className="block p-4 text-sm text-color-secondary hover:underline hover:underline-offset-2 rounded-xl">
-                    About Us
+                    {t('about')}
                   </a>
                 </Link>
               </li>
               <li className="mb-1">
-                <Link href="/services">
+                <Link href="/activities">
                   <a className="block p-4 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                    Services
+                    {t('activities')}
                   </a>
                 </Link>
               </li>
               <li className="mb-1">
-                <Link href="/portfolio">
+                <Link href="/news">
                   <a className="block p-4 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                    Portfolio
-                  </a>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/pricing">
-                  <a className="block p-4 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                    Pricing
-                  </a>
-                </Link>
-              </li>
-              <li className="mb-1">
-                <Link href="/team">
-                  <a className="block p-4 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                    Team
+                    {t('news')}
                   </a>
                 </Link>
               </li>
               <li className="mb-1">
                 <Link href="/#contact-section">
                   <a className="block p-4 text-sm text-color-secondary hover:underline hover:underline-offset-2">
-                    Contact Us
+                    {t('contact')}
                   </a>
                 </Link>
               </li>
             </ul>
-            <div className="mt-4 pt-6 border-t border-blueGray-100">
+            {/* <div className="mt-4 pt-6 border-t border-blueGray-100">
               <Link href="/login">
                 <a className="block px-4 py-3 mb-2 text-xs text-center text-color-secondary hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded">
                   Log In
                 </a>
               </Link>
-            </div>
+            </div> */}
           </div>
           <div className="mt-auto">
-            <a className="inline-block px-1" href="https://facebook.com">
+            <a
+              className="inline-block px-1"
+              href="https://www.facebook.com/kasofgkc/"
+            >
               <img src="/assets/imgs/icons/facebook-blue.svg" alt="Monst" />
-            </a>
-            <a className="inline-block px-1" href="https://twitter.com">
-              <img src="/assets/imgs/icons/twitter-blue.svg" alt="Monst" />
-            </a>
-            <a className="inline-block px-1" href="https://www.instagram.com">
-              <img src="/assets/imgs/icons/instagram-blue.svg" alt="Monst" />
             </a>
           </div>
         </nav>
