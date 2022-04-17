@@ -1,11 +1,11 @@
 import React from 'react';
-import Layout from '../../components/layout/Layout';
+import Layout from '../components/layout/Layout';
 import path from 'path';
 import fs from 'fs';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
-import Slider3 from '../../components/slider/Slider3';
-import TextEffect from '../../components/elements/TextEffect';
+import Slider3 from '../components/slider/Slider3';
+import TextEffect from '../components/elements/TextEffect';
 import Link from 'next/link';
 
 const news_template = props => {
