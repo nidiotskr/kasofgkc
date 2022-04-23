@@ -65,34 +65,34 @@ const Header = ({ handleHidden }) => {
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
               <li className="group relative pt-4 pb-4 has-child">
                 <Link href="/about">
-                  <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
+                  <a className="text-md hover:text-color-secondary hover:underline hover:underline-offset-4">
                     {t('about')}
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/activities">
-                  <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
+                  <a className="text-md hover:text-color-secondary hover:underline hover:underline-offset-4">
                     {t('activities')}
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/news">
-                  <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
+                  <a className="text-md hover:text-color-secondary hover:underline hover:underline-offset-4">
                     {t('news')}
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
                 <Link href="/#contact-section" scroll>
-                  <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
+                  <a className="text-md hover:text-color-secondary hover:underline hover:underline-offset-4">
                     {t('contact')}
                   </a>
                 </Link>
               </li>
               <li className="group relative pt-4 pb-4 has-child">
-                <a className="text-sm font-semibold hover:text-color-secondary hover:underline hover:underline-offset-4">
+                <a className="text-md hover:text-color-secondary hover:underline hover:underline-offset-4">
                   {t('organizations')}
                 </a>
                 <ul className="drop-down-menu min-w-200">

@@ -110,6 +110,15 @@
 .font-heading{
 	font-family: 'Roboto', sans-serif !important;
 }
+.font-notosans-kr{
+	font-family: 'Noto Sans KR', sans-serif;
+}
+.font-notoserif-kr{
+	font-family: 'Noto Serif KR', serif;
+}
+.font-libre{
+font-family: 'Libre Bodoni', serif;
+}
 .text-body{
 	--tw-text-opacity: 1 !important;
 	color: rgba(30, 41, 59, var(--tw-text-opacity)) !important;

@@ -9,6 +9,7 @@ import { useTranslation } from 'next-i18next';
 
 function Activities(props) {
   const events = props.events;
+  const { t } = useTranslation('activities');
 
   return (
     <>
@@ -21,7 +22,7 @@ function Activities(props) {
         >
           <div className="container">
             <h1 className="text-3xl text-center lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
-              한인회 활동
+              {t('title')}
             </h1>
           </div>
         </section>
@@ -106,10 +107,9 @@ export const getStaticProps = async ({ locale }) => {
     props: {
       events,
       ...(await serverSideTranslations(locale, [
-        'home',
+        'activities',
         'header',
-        'greeting',
-        'poster',
+        'mobilemenu',
       ])),
     },
   };
