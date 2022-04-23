@@ -71,7 +71,7 @@ const news_template = props => {
                       aria-label="Pagination"
                     >
                       <a
-                        href="/news/0"
+                        href="/news"
                         className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                       >
                         <span className="sr-only">Previous</span>
@@ -81,7 +81,7 @@ const news_template = props => {
                         />
                       </a>
                       <a
-                        href="/news/2"
+                        href="/news"
                         className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
                       >
                         <span className="sr-only">Next</span>
