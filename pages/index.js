@@ -49,7 +49,7 @@ const Home = () => {
             <div className="max-w-2xl lg:max-w-3xl mx-auto">
               <div className="mb-12 text-center">
                 <h2
-                  className="text-3xl lg:text-4xl text-color-secondary font-bold font-heading wow animate__animated animate__fadeIn animated"
+                  className="text-2xl lg:text-4xl text-color-secondary font-bold font-heading wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".1s"
                 >
                   {t('contact')}
