@@ -14,7 +14,7 @@ const Home = () => {
     <>
       <Layout>
         <section
-          className="w-full h-screen pb-40 bg-top 3xl:bg-center bg-cover bg-no-repeat -mt-24 pt-36"
+          className="w-full h-screen pb-40 bg-top 2xl:bg-center bg-cover bg-no-repeat -mt-24 pt-36"
           style={{
             backgroundImage: "url('assets/imgs/backgrounds/sunflower1.jpg')",
           }}

@@ -53,14 +53,20 @@ const Header = ({ handleHidden }) => {
       <header
         className={
           scroll
-            ? 'bg-theme-primary opacity-70 sticky-bar mt-4 stick text-white'
+            ? 'bg-theme-primary opacity-70 sticky-bar stick mt-4 text-white'
             : 'bg-transparent sticky-bar mt-4 text-white'
         }
       >
         <div className="container">
           <nav className="flex justify-between items-center py-3">
             <Link href="/">
-              <a className="text-3xl font-semibold leading-none">LOGO</a>
+              <a className="flex">
+                <img
+                  className="w-12 pr-2"
+                  src="/assets/imgs/logos/kasgkc-logo.svg"
+                ></img>
+                <a className="pt-4 pb-4 text-color-primary">KASGKC</a>
+              </a>
             </Link>
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
               <li className="group relative pt-4 pb-4 has-child">
