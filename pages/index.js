@@ -134,7 +134,7 @@ const Home = () => {
                   </svg>
                   <div className="leading-relaxed text-blueGray-400">
                     <span className="text-sm">Address</span>
-                    <p>10322 Metcalf Ave</p>
+                    <p>10609 Floyd St</p>
                     <p>Overland Park(KS), 66212</p>
                   </div>
                 </div>
