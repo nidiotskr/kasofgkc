@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import NewsCard from './news_card';
+import NewsCard from '../components/NewsCard';
 import path from 'path';
 import fs from 'fs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
