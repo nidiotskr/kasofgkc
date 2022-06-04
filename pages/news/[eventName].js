@@ -6,12 +6,14 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 import path from 'path';
 import fs from 'fs';
 import { useRouter } from 'next/router';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
 export default function DynamicPage(props) {
+  const { t } = useTranslation('news');
   const router = useRouter();
   const { eventName } = router.query;
   const event = props.events.find(event => event.eventName === eventName);
-  console.log(event);
 
   return (
     <>
@@ -19,9 +21,15 @@ export default function DynamicPage(props) {
         <section
           className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('../assets/imgs/backgrounds/sunflower3.jpg')",
+            backgroundImage: "url('/assets/imgs/backgrounds/sunflower3.jpg')",
           }}
-        ></section>
+        >
+          <div className="container max-w-7xl">
+            <h1 className="text-3xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
+              {t('title')}
+            </h1>
+          </div>
+        </section>
         <section className="py-12 lg:py-24 md:pt-20 md:pb-12" id="how-we-work">
           <div className="container">
             <div className="max-w-lg mx-auto mb-10 lg:mb-20 text-center">
@@ -135,7 +143,7 @@ export default function DynamicPage(props) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const rootPath = path.join(process.cwd(), 'public/assets/imgs/news');
   const eventNames = fs.readdirSync(rootPath);
 
@@ -148,9 +156,6 @@ export async function getStaticProps() {
     const eventMeta = JSON.parse(
       fs.readFileSync(path.join(eventPath, eventMetaFileName)),
     );
-    const imageNames = fileNames.filter(fileName => {
-      return fileName.indexOf('.json') == -1;
-    });
 
     return {
       eventName,
@@ -161,6 +166,14 @@ export async function getStaticProps() {
   return {
     props: {
       events,
+      ...(await serverSideTranslations(locale, [
+        'home',
+        'header',
+        'greeting',
+        'poster',
+        'mobilemenu',
+        'news',
+      ])),
     },
   };
 }
@@ -168,9 +181,17 @@ export async function getStaticProps() {
 export async function getStaticPaths() {
   const rootPath = path.join(process.cwd(), 'public/assets/imgs/news');
   const eventNames = fs.readdirSync(rootPath);
-  const paths = eventNames.map(eventName => ({
-    params: { eventName: eventName },
-  }));
+  let paths = [];
+  eventNames.map(eventName => {
+    paths.push({
+      params: { eventName: eventName },
+      locale: 'ko',
+    });
+    paths.push({
+      params: { eventName: eventName },
+      locale: 'en',
+    });
+  });
 
   return { paths, fallback: false };
 }
