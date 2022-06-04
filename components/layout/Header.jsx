@@ -65,7 +65,7 @@ const Header = ({ handleHidden }) => {
                   className="w-12 pr-2"
                   src="/assets/imgs/logos/kasgkc-logo.svg"
                 ></img>
-                <a className="pt-4 pb-4 text-color-primary">KASGKC</a>
+                <p className="pt-4 pb-4 text-color-primary">KASGKC</p>
               </a>
             </Link>
             <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">

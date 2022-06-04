@@ -1,10 +1,11 @@
 import React from 'react';
 import Layout from '../components/layout/Layout';
-import News_card from './news/news_card';
+import NewsCard from './news_card';
 import path from 'path';
 import fs from 'fs';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import Footer from '../components/layout/Footer';
 
 const News = props => {
   const events = props.events;
@@ -19,22 +20,23 @@ const News = props => {
             backgroundImage: "url('/assets/imgs/backgrounds/sunflower3.jpg')",
           }}
         >
-          <div className="container">
-            <h1 className="text-3xl text-center lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
+          <div className="container max-w-7xl">
+            <h1 className="text-3xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
               {t('title')}
             </h1>
           </div>
         </section>
-        <section className="pt-12 pb-24 bg-blueGray-50">
-          <div className="container">
-            <div className="flex flex-wrap items-center justify-between max-w-2xl lg:max-w-full mb-12"></div>
-
-            <div className="flex flex-wrap -mx-3 -mb-6 text-center">
-              <News_card news={events} />
+        <section className="pt-8 lg:pt-24 pb-48 bg-blueGray-50">
+          <div className="container max-w-6xl">
+            <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center lg:justify-start mb-12 text-center">
+              {events.map((event, i) => {
+                return <NewsCard news={event} key={i} />;
+              })}
             </div>
           </div>
         </section>
       </Layout>
+      <Footer />
     </>
   );
 };

@@ -7,7 +7,7 @@ const Footer = props => {
     <>
       <section
         className={
-          page === 'main' ? 'py-8 bg-theme-primary' : 'py-16 bg-slate-200'
+          page === 'main' ? 'py-8 bg-theme-primary' : 'py-6 bg-slate-200'
         }
       >
         <div

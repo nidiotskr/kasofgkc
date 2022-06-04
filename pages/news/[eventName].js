@@ -5,101 +5,86 @@ import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
 import path from 'path';
 import fs from 'fs';
+import { useRouter } from 'next/router';
 
 export default function DynamicPage(props) {
-  const events = props.events;
-  const [event] = events;
+  const router = useRouter();
+  const { eventName } = router.query;
+  const event = props.events.find(event => event.eventName === eventName);
+  console.log(event);
+
   return (
     <>
       <Layout>
         <section
           className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('assets/imgs/backgrounds/sunflower3.jpg')",
+            backgroundImage: "url('../assets/imgs/backgrounds/sunflower3.jpg')",
           }}
         ></section>
-        <section className="hero-3">
+        <section className="py-12 lg:py-24 md:pt-20 md:pb-12" id="how-we-work">
           <div className="container">
-            <div className="flex flex-wrap items-center -mx-3">
-              <div className="w-full lg:w-3/5 px-3 mb-12 lg:mb-0"></div>
+            <div className="max-w-lg mx-auto mb-10 lg:mb-20 text-center">
+              <h3
+                className="my-3 text-3xl md:text-4xl text-blueGray-900 font-bold font-heading wow animate__animated animate__fadeIn"
+                data-wow-delay="0"
+              >
+                {event.eventMeta.title}
+              </h3>
+              <p
+                className="text-blueGray-400 wow animate__animated animate__fadeIn"
+                data-wow-delay=".3s"
+              >
+                {event.eventMeta.date}
+              </p>
+            </div>
+            <div
+              className="flex flex-col justify-center relative max-w-3xl mx-auto bg-slate-200 wow animate__animated animate__fadeIn"
+              data-wow-delay=".3s"
+            >
+              <img
+                className="m-4 md:m-6 lg:m-12"
+                src={event.eventMeta.img_path}
+                alt="Monst"
+              />
+              <p
+                className="text-slate-500 mx-24 mb-12 wow animate__animated animate__fadeIn"
+                data-wow-delay=".4s"
+              >
+                {event.eventMeta.description}
+              </p>
+              <div>
+                <nav
+                  className="flex justify-between rounded-md shadow-sm -space-x-px"
+                  aria-label="Pagination"
+                >
+                  <a
+                    href="/news/0"
+                    className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                  >
+                    <span className="sr-only">Previous</span>
+                    <ChevronLeftIcon className="h-10 w-10" aria-hidden="true" />
+                  </a>
+                  <a
+                    href="/news/2"
+                    className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+                  >
+                    <span className="sr-only">Next</span>
+                    <ChevronRightIcon
+                      className="h-10 w-10"
+                      aria-hidden="true"
+                    />
+                  </a>
+                </nav>
+              </div>
             </div>
           </div>
         </section>
-
-        {/* Main */}
-        {events.map(event => {
-          return (
-            <section className="py-12 md:pt-20 md:pb-12" id="how-we-work">
-              <div className="container">
-                <div className="max-w-lg mx-auto mb-20 text-center">
-                  <h3
-                    className="my-3 text-3xl md:text-4xl text-blueGray-900 font-bold font-heading wow animate__animated animate__fadeIn"
-                    data-wow-delay="0"
-                  >
-                    {event.eventMeta.title}
-                  </h3>
-                  <p
-                    className="text-blueGray-400 wow animate__animated animate__fadeIn"
-                    data-wow-delay=".3s"
-                  >
-                    {event.eventMeta.date}
-                  </p>
-                </div>
-                <div
-                  className="flex flex-col justify-center relative max-w-3xl mx-auto bg-slate-200 wow animate__animated animate__fadeIn"
-                  data-wow-delay=".3s"
-                >
-                  <img
-                    className="m-12"
-                    src={event.eventMeta.img_path2}
-                    alt="Monst"
-                  />
-
-                  <p
-                    className="text-slate-500 mx-24 mb-12 wow animate__animated animate__fadeIn"
-                    data-wow-delay=".4s"
-                  >
-                    {event.eventMeta.description}
-                  </p>
-
-                  {/* Buttons */}
-                  <div>
-                    <nav
-                      className="flex justify-between rounded-md shadow-sm -space-x-px"
-                      aria-label="Pagination"
-                    >
-                      <a
-                        href="/news/0"
-                        className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-                      >
-                        <span className="sr-only">Previous</span>
-                        <ChevronLeftIcon
-                          className="h-10 w-10"
-                          aria-hidden="true"
-                        />
-                      </a>
-                      <a
-                        href="/news/2"
-                        className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-                      >
-                        <span className="sr-only">Next</span>
-                        <ChevronRightIcon
-                          className="h-10 w-10"
-                          aria-hidden="true"
-                        />
-                      </a>
-                    </nav>
-                  </div>
-                </div>
-              </div>
-            </section>
-          );
-        })}
-
-        {/* newsletter subscription */}
-        <section
+        {/* <section
           className="py-20 bg-top bg-no-repeat"
-          style={{ backgroundImage: "url('assets/imgs/elements/blob.svg')" }}
+          style={{
+            backgroundImage: "url('../assets/imgs/elements/blob.svg')",
+          }}
         >
           <div className="container">
             <div className="relative py-20 px-4 lg:p-20">
@@ -144,7 +129,7 @@ export default function DynamicPage(props) {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </Layout>
     </>
   );
@@ -167,15 +152,9 @@ export async function getStaticProps() {
       return fileName.indexOf('.json') == -1;
     });
 
-    const imagePaths = imageNames.map(imageName => {
-      const imagePath = path.join('/assets/imgs/news', eventName, imageName);
-      return imagePath;
-    });
-
     return {
       eventName,
       eventMeta,
-      imagePaths: imagePaths,
     };
   });
 
@@ -187,9 +166,10 @@ export async function getStaticProps() {
 }
 
 export async function getStaticPaths() {
-  const posts = ['a', 'b'];
-  const paths = posts.map(post => ({
-    params: { slug: post },
+  const rootPath = path.join(process.cwd(), 'public/assets/imgs/news');
+  const eventNames = fs.readdirSync(rootPath);
+  const paths = eventNames.map(eventName => ({
+    params: { eventName: eventName },
   }));
 
   return { paths, fallback: false };
