@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Layout from '../../components/layout/Layout';
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid';
 
 import path from 'path';
 import fs from 'fs';
@@ -14,6 +13,138 @@ export default function DynamicPage(props) {
   const router = useRouter();
   const { eventName } = router.query;
   const event = props.events.find(event => event.eventName === eventName);
+
+  const is_previous_news_click_disabled = () => {
+    const event_index = props.events.findIndex(
+      event => event.eventName === eventName,
+    );
+
+    return event_index === 0;
+  };
+
+  const is_next_news_click_disabled = () => {
+    const num_events = props.events.length;
+    const event_index = props.events.findIndex(
+      event => event.eventName === eventName,
+    );
+
+    return event_index === num_events - 1;
+  };
+
+  const handle_previous_news_click = () => {
+    const event_index = props.events.findIndex(
+      event => event.eventName === eventName,
+    );
+    const prev_eventName = props.events[event_index - 1].eventName;
+
+    router.push(`/news/${prev_eventName}`);
+  };
+
+  const handle_next_news_click = () => {
+    const event_index = props.events.findIndex(
+      event => event.eventName === eventName,
+    );
+    const next_eventName = props.events[event_index + 1].eventName;
+
+    router.push(`/news/${next_eventName}`);
+  };
+
+  const PrevButton = () => {
+    if (is_previous_news_click_disabled()) {
+      return (
+        <button
+          className="relative inline-flex items-center px-2 py-2 rounded-md border border-gray-300 bg-gray-300 text-sm font-medium text-gray-500"
+          disabled
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M7 16l-4-4m0 0l4-4m-4 4h18"
+            ></path>
+          </svg>
+        </button>
+      );
+    } else {
+      return (
+        <button
+          className="relative inline-flex items-center px-2 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+          onClick={handle_previous_news_click}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M7 16l-4-4m0 0l4-4m-4 4h18"
+            ></path>
+          </svg>
+        </button>
+      );
+    }
+  };
+
+  const NextButton = () => {
+    if (is_next_news_click_disabled()) {
+      return (
+        <button
+          className="relative inline-flex items-center px-2 py-2 rounded-md border border-gray-300 bg-gray-300 text-sm font-medium text-gray-500"
+          disabled
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            ></path>
+          </svg>
+        </button>
+      );
+    } else {
+      return (
+        <button
+          className="relative inline-flex items-center px-2 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
+          onClick={handle_next_news_click}
+        >
+          <span className="sr-only">Next</span>
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            ></path>
+          </svg>
+        </button>
+      );
+    }
+  };
 
   return (
     <>
@@ -56,7 +187,7 @@ export default function DynamicPage(props) {
                 alt="Monst"
               />
               <p
-                className="text-slate-500 mx-24 mb-12 wow animate__animated animate__fadeIn"
+                className="text-slate-500 mx-24 mb-6 wow animate__animated animate__fadeIn"
                 data-wow-delay=".4s"
               >
                 {event.eventMeta.description}
@@ -66,30 +197,15 @@ export default function DynamicPage(props) {
                   className="flex justify-between rounded-md shadow-sm -space-x-px"
                   aria-label="Pagination"
                 >
-                  <a
-                    href="/news/0"
-                    className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-                  >
-                    <span className="sr-only">Previous</span>
-                    <ChevronLeftIcon className="h-10 w-10" aria-hidden="true" />
-                  </a>
-                  <a
-                    href="/news/2"
-                    className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
-                  >
-                    <span className="sr-only">Next</span>
-                    <ChevronRightIcon
-                      className="h-10 w-10"
-                      aria-hidden="true"
-                    />
-                  </a>
+                  <PrevButton />
+                  <NextButton />
                 </nav>
               </div>
             </div>
           </div>
         </section>
-        {/* <section
-          className="py-20 bg-top bg-no-repeat"
+        <section
+          className="py-12 bg-top bg-no-repeat"
           style={{
             backgroundImage: "url('../assets/imgs/elements/blob.svg')",
           }}
@@ -98,8 +214,8 @@ export default function DynamicPage(props) {
             <div className="relative py-20 px-4 lg:p-20">
               <div className="max-w-lg mx-auto text-center">
                 <h2 className="mb-4 text-3xl lg:text-4xl font-bold font-heading wow animate__animated animate__fadeIn">
-                  <span>Subscribe now to </span>
-                  <span className="text-blue-500">Our Newsletter. </span>
+                  <span>Subscribe to new events from </span>
+                  <span className="text-blue-500">KASGKC </span>
                 </h2>
                 <p
                   className="mb-8 text-blueGray-400 wow animate__animated animate__fadeIn"
@@ -137,7 +253,7 @@ export default function DynamicPage(props) {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
       </Layout>
     </>
   );
