@@ -27,7 +27,7 @@ function Poster() {
               >
                 <img
                   className="w-full object-cover rounded-md shadow-lg"
-                  src="assets/imgs/posters/장애인체전2022.png"
+                  src="assets/imgs/posters/시카고영사관순회.jpg"
                   alt="recent_news"
                 />
               </div>
