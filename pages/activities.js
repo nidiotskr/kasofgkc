@@ -44,7 +44,7 @@ function Activities(props) {
                     {event.eventMeta.description === '' ? (
                       <></>
                     ) : (
-                      <p className="mx-4 lg:mx-12 pt-6 text-sm md:text-lg text-left">
+                      <p className="mx-4 lg:mx-12 pt-6 lg:pt-12 text-sm md:text-lg text-left">
                         {event.eventMeta.description}
                       </p>
                     )}
