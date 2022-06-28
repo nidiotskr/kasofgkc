@@ -2,7 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
-function Poster() {
+function Poster(props) {
+  const { posterPath } = props;
   const { t } = useTranslation('poster');
 
   return (
@@ -27,7 +28,7 @@ function Poster() {
               >
                 <img
                   className="w-full object-cover rounded-md shadow-lg"
-                  src="assets/imgs/posters/시카고영사관순회.jpg"
+                  src={posterPath}
                   alt="recent_news"
                 />
               </div>

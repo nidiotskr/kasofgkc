@@ -32,13 +32,23 @@ function Activities(props) {
               {events.map((event, i) => {
                 return (
                   <div
-                    className="py-16 text-center wow animate__animated animate__fadeIn animated"
+                    className="py-8 lg:py-12 text-center wow animate__animated animate__fadeIn animated"
                     key={i}
                   >
-                    <h2 className="text-3xl lg:text-4xl font-bold">
+                    <h2 className="text-xl md:text-3xl lg:text-4xl font-bold">
                       {event.eventMeta.title}
                     </h2>
-                    <p className="text-sm lg:text-md">{event.eventMeta.date}</p>
+                    <p className="font-medium pt-4 text-sm md:text-lg lg:text-xl">
+                      {event.eventMeta.date}
+                    </p>
+                    {event.eventMeta.description === '' ? (
+                      <></>
+                    ) : (
+                      <p className="mx-4 lg:mx-12 pt-6 text-sm md:text-lg text-left">
+                        {event.eventMeta.description}
+                      </p>
+                    )}
+
                     <div className="pt-12 grid grid-cols-2 lg:grid-cols-3 gap-2 wow animate__animated animate__fadeIn animated">
                       {event.imagePaths.map((imagePath, i) => {
                         return (

@@ -1,4 +1,6 @@
 import React from 'react';
+import path from 'path';
+import fs from 'fs';
 import Layout from '../components/layout/Layout';
 import TextEffect from '../components/elements/TextEffect';
 import Poster from './index_poster';
@@ -7,8 +9,9 @@ import Footer from '../components/layout/Footer';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 
-const Home = () => {
+const Home = props => {
   const { t } = useTranslation('home');
+  const { mostRecentPosterPath } = props;
 
   return (
     <>
@@ -40,7 +43,7 @@ const Home = () => {
           </div>
         </section>
         <Welcome />
-        <Poster />
+        <Poster posterPath={mostRecentPosterPath} />
         <section
           id="contact-section"
           className="pt-16 pb-6 lg:pt-36 lg:pb-24 bg-theme-primary text-color-secondary"
@@ -150,14 +153,45 @@ const Home = () => {
 
 export default Home;
 
-export const getStaticProps = async ({ locale }) => ({
-  props: {
-    ...(await serverSideTranslations(locale, [
-      'home',
-      'header',
-      'greeting',
-      'poster',
-      'mobilemenu',
-    ])),
-  },
-});
+export const getStaticProps = async ({ locale }) => {
+  const rootPath = path.join(process.cwd(), 'public/assets/imgs/posters');
+  const posterNames = fs.readdirSync(rootPath).sort((a, b) => {
+    return b - a;
+  });
+
+  const today = new Date()
+    .toJSON()
+    .slice(0, 10)
+    .replace('-', '')
+    .replace('-', '');
+  let diff_max = 1000;
+  let mostRecentPosterName = '';
+
+  posterNames.map(posterName => {
+    let posterNameParsed = posterName.split('_')[0];
+    let diff = parseInt(posterNameParsed) - parseInt(today);
+
+    if (diff < diff_max && diff >= 0) {
+      diff_max = diff;
+      mostRecentPosterName = posterName;
+    }
+  });
+
+  const mostRecentPosterPath = path.join(
+    'assets/imgs/posters',
+    mostRecentPosterName,
+  );
+
+  return {
+    props: {
+      mostRecentPosterPath,
+      ...(await serverSideTranslations(locale, [
+        'home',
+        'header',
+        'greeting',
+        'poster',
+        'mobilemenu',
+      ])),
+    },
+  };
+};
