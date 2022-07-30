@@ -27,7 +27,7 @@ function Activities(props) {
           </div>
         </section>
         <section className="bg-slate-100">
-          <div className="container max-w-6xl">
+          <div className="container max-w-6xl pt-6 lg:pt-12">
             <div className="flex flex-col justfy-center">
               {events.map((event, i) => {
                 return (
@@ -48,8 +48,7 @@ function Activities(props) {
                         {event.eventMeta.description}
                       </p>
                     )}
-
-                    <div className="pt-12 grid grid-cols-2 lg:grid-cols-3 gap-2 wow animate__animated animate__fadeIn animated">
+                    <div className="mx-4 lg:mx-12 pt-6 lg:pt-12 grid grid-cols-2 lg:grid-cols-3 gap-2 wow animate__animated animate__fadeIn animated">
                       {event.imagePaths.map((imagePath, i) => {
                         return (
                           <Image
