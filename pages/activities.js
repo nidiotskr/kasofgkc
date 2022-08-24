@@ -50,7 +50,6 @@ function Activities(props) {
                     )}
                     <div className="mx-4 lg:mx-12 pt-6 lg:pt-12 grid grid-cols-2 lg:grid-cols-3 gap-2 wow animate__animated animate__fadeIn animated">
                       {event.imagePaths.map((imagePath, i) => {
-                        console.log(event.eventImagePaths);
                         return (
                           <Image
                             key={i}
@@ -93,9 +92,6 @@ export const getStaticProps = async ({ locale }) => {
     const eventMeta = JSON.parse(
       fs.readFileSync(path.join(eventPath, eventMetaFileName)),
     );
-    const eventImagePaths = eventMeta.images.map(imagePath =>
-      path.join('/assets/imgs/activities', eventName, imagePath),
-    );
 
     const imageNames = fileNames.filter(fileName => {
       return fileName.indexOf('.json') == -1;
@@ -113,7 +109,6 @@ export const getStaticProps = async ({ locale }) => {
     return {
       eventName,
       eventMeta,
-      eventImagePaths,
       imagePaths: imagePaths,
     };
   });
