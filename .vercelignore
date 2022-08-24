@@ -1,2 +1,3 @@
 public/assets/imgs/activities/*/*
 !public/assets/imgs/activities/*/*.json
+public/assets/imgs/posters/*
