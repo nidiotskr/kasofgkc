@@ -180,7 +180,7 @@ const About = () => {
             </h2>
             <div className="flex justify-center">
               <img
-                src="/assets/imgs/placeholders/org_map_v1.svg"
+                src="/assets/imgs/placeholders/제34대 조직도_20220918.svg"
                 alt="org_map"
               />
             </div>
