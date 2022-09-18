@@ -7,7 +7,10 @@ function Presidents() {
       <section className="-mt-24 pt-12 relative">
         <div className="container">
           <div className="flex justify-center">
-            <img src="assets/imgs/placeholders/org_map_v1.svg" alt="org_map" />
+            <img
+              src="assets/imgs/placeholders/제34대 조직도_20220918.svg"
+              alt="org_map"
+            />
           </div>
         </div>
       </section>
