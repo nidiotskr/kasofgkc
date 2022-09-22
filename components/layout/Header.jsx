@@ -103,21 +103,68 @@ const Header = ({ handleHidden }) => {
                 </a>
                 <ul className="drop-down-menu min-w-200">
                   <li>
-                    <a className="menu-sub-item text-sm text-black hover:text-blueGray-800">
-                      기관1
+                    <a className="menu-sub-item text-sm text-black hover:text-color-secondary hover:underline hover:underline-offset-4">
+                      캔사스 상록회
                     </a>
                   </li>
                   <li>
-                    <a className="menu-sub-item text-sm text-black hover:text-blueGray-800">
-                      기관2
+                    <a className="menu-sub-item text-sm text-black hover:text-color-secondary hover:underline hover:underline-offset-4">
+                      캔사스 상공회
                     </a>
                   </li>
                   <li>
                     <a
-                      href="http://www.naver.com"
-                      className="menu-sub-item text-sm text-black hover:text-blueGray-800"
+                      href="http://homepy.korean.net/~kckoreanschool/www/"
+                      className="menu-sub-item text-sm text-black hover:text-color-secondary hover:underline hover:underline-offset-4"
                     >
-                      기관3
+                      캔사스 한국학교
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://ko-kr.facebook.com/kansascitykoreanchoir/"
+                      className="menu-sub-item text-sm text-black hover:text-color-secondary hover:underline hover:underline-offset-4"
+                    >
+                      캔사스 연합성가단
+                    </a>
+                  </li>
+                  <li>
+                    <a className="menu-sub-item text-sm text-black hover:text-color-secondary hover:underline hover:underline-offset-4">
+                      캔사스 장로성가단
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.ksainusa.net/"
+                      className="menu-sub-item text-sm text-black hover:text-color-secondary hover:underline hover:underline-offset-4"
+                      캔사스
+                      영사관싴
+                    >
+                      재미 대한체육회
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.kpsausa.org/"
+                      className="menu-sub-item text-sm text-black hover:text-color-secondary hover:underline hover:underline-offset-4"
+                    >
+                      재미 대한장애인체육회
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.instagram.com/kwf.in.kc/"
+                      className="menu-sub-item text-sm text-black hover:text-color-secondary hover:underline hover:underline-offset-4"
+                    >
+                      KC KPOP
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://overseas.mofa.go.kr/us-chicago-ko/index.do"
+                      className="menu-sub-item text-sm text-black hover:text-color-secondary hover:underline hover:underline-offset-4"
+                    >
+                      주시카고 대한민국 총영사관
                     </a>
                   </li>
                 </ul>
