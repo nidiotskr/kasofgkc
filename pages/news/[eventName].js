@@ -152,7 +152,7 @@ export default function DynamicPage(props) {
         <section
           className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('/assets/imgs/backgrounds/sunflower3.jpg')",
+            backgroundImage: "url('/assets/imgs/backgrounds/header2.jpg')",
           }}
         >
           <div className="container max-w-7xl">

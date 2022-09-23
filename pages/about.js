@@ -13,7 +13,7 @@ const About = () => {
         <section
           className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('/assets/imgs/backgrounds/sunflower3.jpg')",
+            backgroundImage: "url('/assets/imgs/backgrounds/header2.jpg')",
           }}
         >
           <div className="container">
@@ -22,7 +22,7 @@ const About = () => {
             </h1>
           </div>
         </section>
-        <section className="pt-16 lg:pt-24">
+        <section className="py-24 lg:py-48">
           <div className="container max-w-4xl mx-8">
             <h2
               className="text-3xl text-center lg:text-5xl mb-5 font-bold wow animate__animated animate__fadeIn animated"
@@ -30,7 +30,7 @@ const About = () => {
             >
               제34대 한인회장 취임사
             </h2>
-            <div className="pb-16 grid justify-items-center items-start">
+            <div className="grid justify-items-center items-start">
               <div
                 className="wow animate__animated animated__fadeIn"
                 data-wow-delay=".5s"
@@ -94,7 +94,8 @@ const About = () => {
                 부탁드립니다. 감사합니다.
                 <br></br>
                 <br></br>
-                <span className="font-semibold">
+                <br></br>
+                <span className="font-semibold text-lg">
                   캔사스 제34대 한인회장 김성배 배상
                 </span>
                 <br></br>
@@ -103,7 +104,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="pt-16 lg:pt-24 bg-slate-100">
+        <section className="py-24 lg:py-48 bg-slate-100">
           <div className="container max-w-4xl mx-8">
             <h2
               className="text-3xl text-center font-bold lg:text-5xl mb-12 lg:mb-16 wow animate__animated animate__fadeIn animated"
@@ -111,7 +112,7 @@ const About = () => {
             >
               한인회 비전과 미션
             </h2>
-            <div className="pb-16 lg:pb-24 grid justify-items-center items-start">
+            <div className="grid justify-items-center items-start">
               <div className="lg:w-2/3 mx-4 lg:mx-8">
                 <div
                   className="flex flex-row items-center wow animate__animated animate__fadeIn animated"
@@ -122,7 +123,7 @@ const About = () => {
                       1
                     </span>
                   </div>
-                  <h2 className="font-heading font-semibold text-xl mb-4 ml-2">
+                  <h2 className="font-heading font-semibold text-2xl mb-4 ml-2">
                     비전
                   </h2>
                 </div>
@@ -145,7 +146,7 @@ const About = () => {
                       2
                     </span>
                   </div>
-                  <h2 className="font-heading font-semibold text-xl mb-4 ml-2">
+                  <h2 className="font-heading font-semibold text-2xl mb-4 ml-2">
                     미션
                   </h2>
                 </div>
@@ -170,7 +171,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="pt-16 lg:pt-24">
+        <section className="pt-24 lg:pt-48 pb-12 lg:pb-24">
           <div className="container max-w-4xl mx-auto">
             <h2
               className="font-bold text-3xl text-center lg:text-5xl mb-5 wow animate__animated animate__fadeIn animated"
