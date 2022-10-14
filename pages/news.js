@@ -15,13 +15,13 @@ const News = props => {
     <>
       <Layout>
         <section
-          className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
+          className="-mt-24 pt-48 pb-12 bg-top lg:bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('/assets/imgs/backgrounds/header2.jpg')",
+            backgroundImage: "url('/assets/imgs/backgrounds/header9.png')",
           }}
         >
           <div className="container max-w-7xl">
-            <h1 className="text-3xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
+            <h1 className="text-4xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
               {t('title')}
             </h1>
           </div>

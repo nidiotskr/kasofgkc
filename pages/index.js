@@ -46,7 +46,7 @@ const Home = props => {
         <Poster posterPath={mostRecentPosterPath} />
         <section
           id="contact-section"
-          className="pt-16 pb-6 lg:pt-36 lg:pb-24 bg-theme-primary text-color-secondary"
+          className="pt-24 pb-6 lg:pt-36 lg:pb-24 bg-theme-primary text-color-secondary"
         >
           <div className="container">
             <div className="max-w-2xl lg:max-w-3xl mx-auto">
