@@ -22,7 +22,7 @@ const About = () => {
             </h1>
           </div>
         </section>
-        <section className="py-24 lg:py-48">
+        <section className="py-24 lg:py-36">
           <div className="container max-w-4xl mx-8">
             <h2
               className="text-3xl text-center lg:text-5xl mb-5 font-bold wow animate__animated animate__fadeIn animated"
@@ -32,11 +32,11 @@ const About = () => {
             </h2>
             <div className="grid justify-items-center items-start">
               <div
-                className="wow animate__animated animated__fadeIn"
+                className="my-8 lg:my-16 wow animate__animated animated__fadeIn"
                 data-wow-delay=".5s"
               >
                 <img
-                  className="mt-8 mb-12 w-48 rounded-md"
+                  className="w-48 rounded-xl"
                   src="/assets/imgs/placeholders/president_profile_picture.jpg"
                   alt="PPP"
                 />
@@ -104,13 +104,13 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="py-24 lg:py-48 bg-slate-100">
+        <section className="py-24 lg:py-36 bg-slate-100">
           <div className="container max-w-4xl mx-8">
             <h2
-              className="text-3xl text-center font-bold lg:text-5xl mb-12 lg:mb-16 wow animate__animated animate__fadeIn animated"
+              className="text-3xl text-center font-bold lg:text-5xl mb-16 lg:mb-24 wow animate__animated animate__fadeIn animated"
               data-wow-delay=".3s"
             >
-              한인회 비전과 미션
+              {t('vision_mission_session_title')}
             </h2>
             <div className="grid justify-items-center items-start">
               <div className="lg:w-2/3 mx-4 lg:mx-8">
@@ -124,18 +124,14 @@ const About = () => {
                     </span>
                   </div>
                   <h2 className="font-heading font-semibold text-2xl mb-4 ml-2">
-                    비전
+                    {t('vision_title')}
                   </h2>
                 </div>
                 <ul
-                  className="mb-8 wow animate__animated animate__fadeIn animated"
+                  className="mb-12 lg:mb-16 wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".4s"
                 >
-                  <li>
-                    캔사스시티 한인회는 지속적인 혁신을 통하여 한인사회의
-                    지위향상과 한인문화창달 및 계승과 국제친선을 선도하는
-                    기관으로 구현한다.
-                  </li>
+                  <li>{t('vision_content')}</li>
                 </ul>
                 <div
                   className="flex flex-row items-center wow animate__animated animate__fadeIn animated"
@@ -147,31 +143,22 @@ const About = () => {
                     </span>
                   </div>
                   <h2 className="font-heading font-semibold text-2xl mb-4 ml-2">
-                    미션
+                    {t('mission_title')}
                   </h2>
                 </div>
                 <ul
-                  className="mb-4 wow animate__animated animate__fadeIn animated"
+                  className="wow animate__animated animate__fadeIn animated"
                   data-wow-delay=".8s"
                 >
-                  <li className="mb-3">
-                    캔사스시티한인회는 회원간의 친목과 화합, 유대강화의 일환으로
-                    한인회관 건립을 적극 추진한다.
-                  </li>
-                  <li className="mb-3">
-                    캔사스시티한인회의 공동이익과 지위향상을 추구하며 직종별.
-                    세대별 차이를 개선하여 소통과 화합을 이루도록 노력한다.
-                  </li>
-                  <li>
-                    캔사스시티한인회는 봉사단체로써 책임과 전문성 있는 기관으로
-                    미주류사회 정치, 문화행사에 적극 참여한다.
-                  </li>
+                  <li className="pb-6">{t('mission_content_1')}</li>
+                  <li className="pb-6">{t('mission_content_2')}</li>
+                  <li className="pb-6">{t('mission_content_3')}</li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
-        <section className="pt-24 lg:pt-48 pb-12 lg:pb-24">
+        <section className="pt-24 lg:pt-36 pb-6 lg:pb-12">
           <div className="container max-w-4xl mx-auto">
             <h2
               className="font-bold text-3xl text-center lg:text-5xl mb-5 wow animate__animated animate__fadeIn animated"

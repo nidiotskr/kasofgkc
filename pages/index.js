@@ -108,7 +108,7 @@ const Home = props => {
                   </svg>
                   <div className="leading-relaxed text-blueGray-400">
                     <span className="text-sm">E-mail</span>
-                    <p>kckasocity@gmail.com</p>
+                    <p>kckasociety@gmail.com</p>
                   </div>
                 </div>
                 <div
