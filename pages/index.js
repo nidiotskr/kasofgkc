@@ -19,22 +19,22 @@ const Home = props => {
         <section
           className="w-full h-screen pb-40 bg-top 2xl:bg-center bg-cover bg-no-repeat -mt-24 pt-36"
           style={{
-            backgroundImage: "url('assets/imgs/backgrounds/sunflower1.jpg')",
+            backgroundImage: "url('assets/imgs/backgrounds/sunflower1-2.jpg')",
           }}
         >
           <div className="container">
             <div className="py-12 mb-24">
               <div className="w-full mx-auto mb-8 text-center">
                 <div className="w-full h-full ">
-                  <h1 className="text-color-primary bg-opacity-50 text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-medium  font-notoserif-kr">
+                  <h1 className="text-color-primary bg-opacity-50 text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-bold  font-notoserif-kr">
                     캔사스시티 한인회
                   </h1>
                   <br />
                   <br />
-                  <h2 className="text-color-primary-200 bg-opacity-50 text-lg sm:text-2xl lg:text-3xl 2xl:text-4xl mb-4 font-heading font-medium  wow animate__animated animate__fadeIn">
+                  <h2 className="text-color-primary-200 bg-opacity-50 text-lg tracking-tighter lg:tracking-normal sm:text-3xl lg:text-3xl 2xl:text-4xl mb-4 font-heading wow animate__animated animate__fadeIn">
                     THE KOREAN AMERICAN SOCIETY OF
                   </h2>
-                  <h1 className="text-color-primary-200 bg-opacity-50 text-2xl sm:text-4xl lg:text-5xl 2xl:text-6xl font-heading font-semibold">
+                  <h1 className="text-color-primary-200 bg-opacity-50 text-2xl tracking-wide sm:tracking-tighter sm:text-5xl lg:text-5xl 2xl:text-6xl font-heading font-semibold">
                     <TextEffect text="GREATER KANSAS CITY" />
                   </h1>
                 </div>
@@ -177,10 +177,9 @@ export const getStaticProps = async ({ locale }) => {
     }
   });
 
-  const mostRecentPosterPath = path.join(
-    'assets/imgs/posters',
-    mostRecentPosterName,
-  );
+  const mostRecentPosterPath = mostRecentPosterName
+    ? path.join('assets/imgs/posters', mostRecentPosterName)
+    : null;
 
   return {
     props: {

@@ -26,11 +26,19 @@ function Poster(props) {
                 className="wow animate__animated animate__fadeIn"
                 data-wow-delay=".5s"
               >
-                <img
-                  className="w-full object-cover rounded-md shadow-lg"
-                  src={posterPath}
-                  alt="recent_news"
-                />
+                {posterPath ? (
+                  <img
+                    className="w-full object-cover rounded-md shadow-lg"
+                    src={posterPath}
+                    alt="recent_news"
+                  />
+                ) : (
+                  <img
+                    className="w-full object-cover rounded-md shadow-lg"
+                    src={'/assets/imgs/backgrounds/commingsoon.jpg'}
+                    alt="recent_news"
+                  />
+                )}
               </div>
             </Link>
           </div>

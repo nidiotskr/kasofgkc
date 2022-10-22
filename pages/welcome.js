@@ -10,7 +10,7 @@ const Welcome = () => {
           className="text-center pb-8 lg:pb-12 wow animate__animated animate__fadeIn"
           data-wow-delay=".3s"
         >
-          <span className="font-heading font-semibold text-2xl lg:text-6xl">
+          <span className="tracking-tight font-heading font-semibold text-2xl lg:text-6xl">
             {t('greeting1')}
           </span>
         </p>
@@ -18,7 +18,7 @@ const Welcome = () => {
           className="text-center wow animate__animated animate__fadeIn"
           data-wow-delay=".5s"
         >
-          <span className="font-heading font-semibold text-2xl lg:text-6xl">
+          <span className="tracking-tight font-heading font-semibold text-2xl lg:text-6xl">
             {t('greeting2')}
           </span>
         </p>
