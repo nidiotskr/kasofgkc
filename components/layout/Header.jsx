@@ -137,8 +137,6 @@ const Header = ({ handleHidden }) => {
                     <a
                       href="https://www.ksainusa.net/"
                       className="menu-sub-item text-sm text-black hover:text-color-secondary hover:underline hover:underline-offset-4"
-                      캔사스
-                      영사관싴
                     >
                       재미 대한체육회
                     </a>
