@@ -77,16 +77,16 @@ const Header = ({ handleHidden }) => {
                 </Link>
               </li>
               <li className="pt-4 pb-4">
-                <Link href="/activities">
+                <Link href="/news">
                   <a className="text-md hover:text-color-secondary hover:underline hover:underline-offset-4">
-                    {t('activities')}
+                    {t('news')}
                   </a>
                 </Link>
               </li>
               <li className="pt-4 pb-4">
-                <Link href="/news">
+                <Link href="/activities">
                   <a className="text-md hover:text-color-secondary hover:underline hover:underline-offset-4">
-                    {t('news')}
+                    {t('activities')}
                   </a>
                 </Link>
               </li>

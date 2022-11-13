@@ -156,7 +156,7 @@ export default function DynamicPage(props) {
           }}
         >
           <div className="container max-w-7xl">
-            <h1 className="text-3xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
+            <h1 className="text-3xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn">
               {t('title')}
             </h1>
           </div>

@@ -21,12 +21,12 @@ const News = props => {
           }}
         >
           <div className="container max-w-7xl">
-            <h1 className="text-4xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
+            <h1 className="text-4xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn">
               {t('title')}
             </h1>
           </div>
         </section>
-        <section className="pt-8 lg:pt-24 pb-48 bg-slate-200">
+        <section className="py-12 lg:py-24 bg-slate-200">
           <div className="container max-w-6xl">
             <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
               {events.map((event, i) => {

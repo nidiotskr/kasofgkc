@@ -17,7 +17,7 @@ const About = () => {
           }}
         >
           <div className="container">
-            <h1 className="text-4xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
+            <h1 className="text-4xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn">
               {t('title')}
             </h1>
           </div>
@@ -25,7 +25,7 @@ const About = () => {
         <section className="py-24 lg:py-36 bg-slate-200">
           <div className="container max-w-4xl mx-8">
             <h2
-              className="text-3xl text-center lg:text-5xl mb-5 font-bold wow animate__animated animate__fadeIn animated"
+              className="text-3xl text-center lg:text-5xl mb-5 font-bold wow animate__animated animate__fadeIn"
               data-wow-delay=".3s"
             >
               {t('greetings_title')}
@@ -184,7 +184,7 @@ const About = () => {
         <section className="py-24 lg:py-36 bg-slate-100">
           <div className="container max-w-4xl mx-8">
             <h2
-              className="text-3xl text-center font-bold lg:text-5xl mb-16 lg:mb-24 wow animate__animated animate__fadeIn animated"
+              className="text-3xl text-center font-bold lg:text-5xl mb-16 lg:mb-24 wow animate__animated animate__fadeIn"
               data-wow-delay=".3s"
             >
               {t('vision_mission_session_title')}
@@ -192,7 +192,7 @@ const About = () => {
             <div className="grid justify-items-center items-start">
               <div className="lg:w-2/3 mx-4 lg:mx-8">
                 <div
-                  className="flex flex-row items-center wow animate__animated animate__fadeIn animated"
+                  className="flex flex-row items-center wow animate__animated animate__fadeIn"
                   data-wow-delay=".2s"
                 >
                   <div className="w-8 mb-5">
@@ -205,13 +205,13 @@ const About = () => {
                   </h2>
                 </div>
                 <ul
-                  className="mb-12 lg:mb-16 wow animate__animated animate__fadeIn animated"
+                  className="mb-12 lg:mb-16 wow animate__animated animate__fadeIn"
                   data-wow-delay=".4s"
                 >
                   <li>{t('vision_content')}</li>
                 </ul>
                 <div
-                  className="flex flex-row items-center wow animate__animated animate__fadeIn animated"
+                  className="flex flex-row items-center wow animate__animated animate__fadeIn"
                   data-wow-delay=".6s"
                 >
                   <div className="w-8 mb-5">
@@ -224,7 +224,7 @@ const About = () => {
                   </h2>
                 </div>
                 <ul
-                  className="wow animate__animated animate__fadeIn animated"
+                  className="wow animate__animated animate__fadeIn"
                   data-wow-delay=".8s"
                 >
                   <li className="pb-6">{t('mission_content_1')}</li>
@@ -238,7 +238,7 @@ const About = () => {
         <section className="pt-24 lg:pt-36 pb-6 lg:pb-12">
           <div className="container max-w-4xl mx-auto">
             <h2
-              className="font-bold text-3xl text-center lg:text-5xl mb-5 wow animate__animated animate__fadeIn animated"
+              className="font-bold text-3xl text-center lg:text-5xl mb-5 wow animate__animated animate__fadeIn"
               data-wow-delay=".1s"
             >
               {t('org_chart')}

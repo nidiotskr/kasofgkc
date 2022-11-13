@@ -21,7 +21,7 @@ function Activities(props) {
           }}
         >
           <div className="container">
-            <h1 className="text-4xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn animated">
+            <h1 className="text-4xl text-center md:text-5xl lg:text-6xl text-white mb-5 wow animate__animated animate__fadeIn">
               {t('title')}
             </h1>
           </div>
@@ -32,7 +32,7 @@ function Activities(props) {
               {events.map((event, i) => {
                 return (
                   <div
-                    className="py-8 lg:py-12 text-center wow animate__animated animate__fadeIn animated"
+                    className="py-8 lg:py-12 text-center wow animate__animated animate__fadeIn"
                     key={i}
                   >
                     <h2 className="text-xl md:text-3xl lg:text-4xl font-bold">
@@ -48,7 +48,7 @@ function Activities(props) {
                         {event.eventMeta.description}
                       </p>
                     )}
-                    <div className="mx-4 lg:mx-12 pt-6 lg:pt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 wow animate__animated animate__fadeIn animated">
+                    <div className="mx-4 lg:mx-12 pt-6 lg:pt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 wow animate__animated animate__fadeIn">
                       {event.imagePaths.map((imagePath, i) => {
                         return (
                           <Image

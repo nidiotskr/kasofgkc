@@ -2,6 +2,7 @@ import React from 'react';
 import path from 'path';
 import fs from 'fs';
 import Layout from '../components/layout/Layout';
+import { Transition } from '@headlessui/react';
 import TextEffect from '../components/elements/TextEffect';
 import Poster from './index_poster';
 import Welcome from './welcome';
@@ -26,9 +27,16 @@ const Home = props => {
             <div className="py-12 mb-24">
               <div className="w-full mx-auto mb-8 text-center">
                 <div className="w-full h-full ">
-                  <h1 className="text-color-primary bg-opacity-50 text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-bold  font-notoserif-kr wow animate__animated animate__fadeIn">
-                    캔사스시티 한인회
-                  </h1>
+                  <Transition
+                    appear={true}
+                    show={true}
+                    enter="transition-opacity duration-300"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    className="text-color-primary bg-opacity-50 text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-bold  font-notoserif-kr wow animate__animated animate__fadeIn"
+                  >
+                    <h1>캔사스시티 한인회</h1>
+                  </Transition>
                   <br />
                   <br />
                   <h2

@@ -8,7 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@headlessui/react": "^1.4.2",
+    "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^1.0.5",
     "fs": "0.0.1-security",
     "google-map-react": "^2.1.10",

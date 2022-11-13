@@ -303,7 +303,7 @@ const About = () => {
             <div className="flex flex-wrap -mx-5">
               <div className="w-1/2 lg:w-1/4 px-5 mb-12">
                 <div
-                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn animated border border-gray-100 hover:border-gray-200"
+                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn border border-gray-100 hover:border-gray-200"
                   data-wow-delay=".1s"
                 >
                   <img
@@ -317,7 +317,7 @@ const About = () => {
               </div>
               <div className="w-1/2 lg:w-1/4 px-5 mb-12">
                 <div
-                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn animated border border-gray-100 hover:border-gray-200"
+                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn border border-gray-100 hover:border-gray-200"
                   data-wow-delay=".3s"
                 >
                   <img
@@ -331,7 +331,7 @@ const About = () => {
               </div>
               <div className="w-1/2 lg:w-1/4 px-5 mb-12">
                 <div
-                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn animated border border-gray-100 hover:border-gray-200"
+                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn border border-gray-100 hover:border-gray-200"
                   data-wow-delay=".5s"
                 >
                   <img
@@ -345,7 +345,7 @@ const About = () => {
               </div>
               <div className="w-1/2 lg:w-1/4 px-5 mb-12">
                 <div
-                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn animated border border-gray-100 hover:border-gray-200"
+                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn border border-gray-100 hover:border-gray-200"
                   data-wow-delay=".7s"
                 >
                   <img
@@ -359,7 +359,7 @@ const About = () => {
               </div>
               <div className="w-1/2 lg:w-1/4 px-5">
                 <div
-                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn animated border border-gray-100 hover:border-gray-200"
+                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn border border-gray-100 hover:border-gray-200"
                   data-wow-delay=".1s"
                 >
                   <img
@@ -373,7 +373,7 @@ const About = () => {
               </div>
               <div className="w-1/2 lg:w-1/4 px-5">
                 <div
-                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn animated border border-gray-100 hover:border-gray-200"
+                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn border border-gray-100 hover:border-gray-200"
                   data-wow-delay=".3s"
                 >
                   <img
@@ -387,7 +387,7 @@ const About = () => {
               </div>
               <div className="w-1/2 lg:w-1/4 px-5">
                 <div
-                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn animated border border-gray-100 hover:border-gray-200"
+                  className="hover-up-5 pt-8 pb-8 px-4 text-center bg-white rounded shadow wow animate__animated animate__fadeIn border border-gray-100 hover:border-gray-200"
                   data-wow-delay=".5s"
                 >
                   <img
