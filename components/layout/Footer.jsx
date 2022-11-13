@@ -12,7 +12,7 @@ const Footer = props => {
       >
         <div
           className="container px-4 mx-auto wow animate__animated animate__fadeIn"
-          data-wow-delay=".3s"
+          data-wow-delay=".1s"
         >
           <div className="flex flex-col items-center lg:justify-between">
             <div className="pt-3 -mx-2 mb-2 lg:mb-0">

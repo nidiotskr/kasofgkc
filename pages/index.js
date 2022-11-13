@@ -26,12 +26,15 @@ const Home = props => {
             <div className="py-12 mb-24">
               <div className="w-full mx-auto mb-8 text-center">
                 <div className="w-full h-full ">
-                  <h1 className="text-color-primary bg-opacity-50 text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-bold  font-notoserif-kr">
+                  <h1 className="text-color-primary bg-opacity-50 text-4xl sm:text-5xl lg:text-6xl 2xl:text-7xl font-bold  font-notoserif-kr wow animate__animated animate__fadeIn">
                     캔사스시티 한인회
                   </h1>
                   <br />
                   <br />
-                  <h2 className="text-color-primary-200 bg-opacity-50 text-lg tracking-tighter lg:tracking-normal sm:text-3xl lg:text-3xl 2xl:text-4xl mb-4 font-heading wow animate__animated animate__fadeIn">
+                  <h2
+                    className="text-color-primary-200 bg-opacity-50 text-lg tracking-tighter lg:tracking-normal sm:text-3xl lg:text-3xl 2xl:text-4xl mb-4 font-heading wow animate__animated animate__fadeIn"
+                    data-wow-delay=".3s"
+                  >
                     THE KOREAN AMERICAN SOCIETY OF
                   </h2>
                   <h1 className="text-color-primary-200 bg-opacity-50 text-2xl tracking-wide sm:tracking-tighter sm:text-5xl lg:text-5xl 2xl:text-6xl font-heading font-semibold">
@@ -51,15 +54,12 @@ const Home = props => {
           <div className="container">
             <div className="max-w-2xl lg:max-w-3xl mx-auto">
               <div className="mb-12 text-center">
-                <h2
-                  className="text-2xl lg:text-4xl text-color-secondary font-bold font-heading wow animate__animated animate__fadeIn animated"
-                  data-wow-delay=".1s"
-                >
+                <h2 className="text-2xl lg:text-4xl text-color-secondary font-bold font-heading wow animate__animated animate__fadeIn animated">
                   {t('contact')}
                 </h2>
                 <p
                   className="pt-2 text-blueGray-400 wow animate__animated animate__fadeIn animated"
-                  data-wow-delay=".3s"
+                  data-wow-delay=".1s"
                 >
                   We will be glad to hear from you.
                 </p>
@@ -67,7 +67,7 @@ const Home = props => {
               <div className="flex flex-col lg:flex-row items-center -mx-3 text-center">
                 <div
                   className="w-1/2 lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeIn animated"
-                  data-wow-delay=".1s"
+                  data-wow-delay=".2s"
                 >
                   <svg
                     className="mb-6 h-8 w-8 mx-auto text-color-primary-100"
@@ -113,7 +113,7 @@ const Home = props => {
                 </div>
                 <div
                   className="w-full lg:w-1/3 px-3 mb-12 wow animate__animated animate__fadeIn animated"
-                  data-wow-delay=".5s"
+                  data-wow-delay=".4s"
                 >
                   <svg
                     className="mb-6 h-8 w-8 mx-auto text-color-primary-100"

@@ -11,10 +11,7 @@ function Poster(props) {
       <div className="flex flex-col items-center hover-up-5">
         <div className="flex flex-col max-w-4xl gap-12 lg:gap-24">
           <div className="w-full">
-            <p
-              className="text-center wow animate__animated animate__fadeIn"
-              data-wow-delay=".3s"
-            >
+            <p className="text-center wow animate__animated animate__fadeIn">
               <span className="font-heading font-semibold text-4xl lg:text-7xl">
                 {t('event')}
               </span>
@@ -24,7 +21,7 @@ function Poster(props) {
             <Link href="/blog-single">
               <div
                 className="wow animate__animated animate__fadeIn"
-                data-wow-delay=".5s"
+                data-wow-delay=".1s"
               >
                 {posterPath ? (
                   <img
