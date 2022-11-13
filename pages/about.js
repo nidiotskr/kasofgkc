@@ -22,7 +22,7 @@ const About = () => {
             </h1>
           </div>
         </section>
-        <section className="py-24 lg:py-36">
+        <section className="py-24 lg:py-36 bg-slate-200">
           <div className="container max-w-4xl mx-8">
             <h2
               className="text-3xl text-center lg:text-5xl mb-5 font-bold wow animate__animated animate__fadeIn animated"
@@ -241,7 +241,7 @@ const About = () => {
               className="font-bold text-3xl text-center lg:text-5xl mb-5 wow animate__animated animate__fadeIn animated"
               data-wow-delay=".1s"
             >
-              한인회 조직도
+              {t('org_chart')}
             </h2>
             <div className="flex justify-center">
               <img

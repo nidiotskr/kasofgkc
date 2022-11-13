@@ -26,9 +26,9 @@ const News = props => {
             </h1>
           </div>
         </section>
-        <section className="pt-8 lg:pt-24 pb-48 bg-blueGray-50">
+        <section className="pt-8 lg:pt-24 pb-48 bg-slate-200">
           <div className="container max-w-6xl">
-            <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center lg:justify-start mb-12 text-center">
+            <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
               {events.map((event, i) => {
                 return <NewsCard news={event} key={i} />;
               })}
@@ -45,7 +45,7 @@ export default News;
 
 export const getStaticProps = async ({ locale }) => {
   const rootPath = path.join(process.cwd(), 'public/assets/imgs/news');
-  const eventNames = fs.readdirSync(rootPath);
+  const eventNames = fs.readdirSync(rootPath).reverse();
 
   const events = eventNames.map(eventName => {
     const eventPath = path.join(rootPath, eventName);

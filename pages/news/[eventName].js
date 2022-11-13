@@ -152,7 +152,7 @@ export default function DynamicPage(props) {
         <section
           className="-mt-24 pt-48 pb-12 bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: "url('/assets/imgs/backgrounds/header2.jpg')",
+            backgroundImage: "url('/assets/imgs/backgrounds/header9.png')",
           }}
         >
           <div className="container max-w-7xl">
@@ -178,23 +178,23 @@ export default function DynamicPage(props) {
               </p>
             </div>
             <div
-              className="flex flex-col justify-center relative max-w-3xl mx-auto bg-slate-200 wow animate__animated animate__fadeIn"
+              className="flex flex-col justify-center relative max-w-3xl mx-auto bg-slate-200 wow animate__animated animate__fadeIn rounded-md"
               data-wow-delay=".3s"
             >
               <img
-                className="m-4 md:m-6 lg:m-12"
+                className="m-4 md:m-6 lg:m-12 rounded-md"
                 src={event.eventMeta.img_path}
                 alt="Monst"
               />
-              <p
+              {/* <p
                 className="text-slate-500 mx-24 mb-6 wow animate__animated animate__fadeIn"
                 data-wow-delay=".4s"
               >
                 {event.eventMeta.description}
-              </p>
+              </p> */}
               <div>
                 <nav
-                  className="flex justify-between rounded-md shadow-sm -space-x-px"
+                  className="pb-4 px-4 flex justify-between rounded-md shadow-sm -space-x-px"
                   aria-label="Pagination"
                 >
                   <PrevButton />
@@ -204,7 +204,7 @@ export default function DynamicPage(props) {
             </div>
           </div>
         </section>
-        <section
+        {/* <section
           className="py-12 bg-top bg-no-repeat"
           style={{
             backgroundImage: "url('../assets/imgs/elements/blob.svg')",
@@ -253,7 +253,7 @@ export default function DynamicPage(props) {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </Layout>
     </>
   );

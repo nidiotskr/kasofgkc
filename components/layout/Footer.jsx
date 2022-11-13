@@ -7,9 +7,7 @@ const Footer = props => {
     <>
       <section
         className={
-          page === 'main'
-            ? 'py-8 lg:py-16 bg-theme-primary'
-            : 'py-8 lg:py-16 bg-slate-200'
+          page === 'main' ? 'pt-4 pb-8 bg-slate-800' : 'pt-4 pb-8 bg-slate-800'
         }
       >
         <div
@@ -17,10 +15,7 @@ const Footer = props => {
           data-wow-delay=".3s"
         >
           <div className="flex flex-col items-center lg:justify-between">
-            <p className="text-sm text-blueGray-400">
-              &copy; 2022. Nidiots. All rights reserved.
-            </p>
-            <div className="pt-3 order-first lg:order-last -mx-2 mb-4 lg:mb-0">
+            <div className="pt-3 -mx-2 mb-2 lg:mb-0">
               <a
                 className="inline-block px-2"
                 href="https://www.facebook.com/kasofgkc/"
@@ -36,6 +31,11 @@ const Footer = props => {
                   alt="Nidiots"
                 />
               </a> */}
+            </div>
+            <div>
+              <p className="text-sm text-blueGray-400">
+                &copy; 2022. Nidiots. All rights reserved.
+              </p>
             </div>
           </div>
         </div>
