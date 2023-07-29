@@ -55,6 +55,44 @@ const Home = props => {
         </section>
         <Welcome />
         <Poster posterPath={mostRecentPosterPath} />
+        <section id="donation-section" className="bg-slate-300 py-24 lg:py-36">
+          <div className="flex flex-col items-center hover-up-5">
+            <div className="flex flex-col max-w-4xl gap-8 lg:gap-16">
+              <div className="w-full">
+                <p className="text-center wow animate__animated animate__fadeIn">
+                  <span className="font-heading font-semibold text-3xl lg:text-5xl">
+                    {t('donation')}
+                  </span>
+                </p>
+              </div>
+              <div className="flex flex-col m-auto max-w-sm lg:max-w-3xl px-8 lg:px-16">
+                <div
+                  className="wow animate__animated animate__fadeIn"
+                  data-wow-delay=".1s"
+                >
+                  <img
+                    className="w-full object-cover rounded-md shadow-lg"
+                    src={'/assets/imgs/elements/gofundme_poster.jpeg'}
+                    alt="gofundme poster"
+                  />
+                </div>
+                <div
+                  className="w-full flex flex-col items-center pt-6 lg:pt-12 wow animate__animated animate__fadeIn"
+                  data-wow-delay=".1s"
+                >
+                  <img
+                    className="w-[200px] rounded-md shadow-lg"
+                    src={'/assets/imgs/elements/gofundme.jpeg'}
+                    alt="gofundme poster"
+                  />
+                  <p className="font-heading font-semibold text-sm lg: text-md pt-3 lg:pt-6">
+                    Please scan the barcode to start a donation today!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section
           id="contact-section"
           className="pt-24 pb-6 lg:pt-36 lg:pb-24 bg-theme-primary text-color-secondary"

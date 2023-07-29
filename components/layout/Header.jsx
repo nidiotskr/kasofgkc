@@ -167,6 +167,13 @@ const Header = ({ handleHidden }) => {
                   </li>
                 </ul>
               </li>
+              <li className="pt-4 pb-4">
+                <Link href="/#donation-section" scroll>
+                  <a className="text-md hover:text-color-secondary hover:underline hover:underline-offset-4">
+                    {t('donation')}
+                  </a>
+                </Link>
+              </li>
             </ul>
             <div className="hidden lg:block">
               <LocaleButton />

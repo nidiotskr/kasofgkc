@@ -116,6 +116,13 @@ const MobileMenu = ({ hiddenClass, handleRemove }) => {
                   </a>
                 </Link>
               </li>
+              <li className="mb-1">
+                <Link href="/#donation-section">
+                  <a className="block p-4 text-sm text-color-secondary hover:underline hover:underline-offset-2">
+                    {t('donation')}
+                  </a>
+                </Link>
+              </li>
             </ul>
             {/* <div className="mt-4 pt-6 border-t border-blueGray-100">
               <Link href="/login">
