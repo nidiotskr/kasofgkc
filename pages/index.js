@@ -57,7 +57,7 @@ const Home = props => {
         <Poster posterPath={mostRecentPosterPath} />
         <section
           id="donation-section"
-          className="bg-slate-300 py-24 lg:py-36 px-4"
+          className="bg-slate-300 py-16 lg:py-24 px-4"
         >
           <div className="flex flex-col items-center hover-up-5">
             <div className="flex flex-col max-w-4xl gap-8 lg:gap-16">
@@ -88,7 +88,7 @@ const Home = props => {
                     src={'/assets/imgs/elements/gofundme.jpeg'}
                     alt="gofundme poster"
                   />
-                  <p className="font-heading font-semibold text-sm lg: text-md pt-4 lg:pt-8">
+                  <p className="text-center font-heading font-semibold text-sm lg: text-md pt-4 lg:pt-8">
                     Please scan the barcode to start a donation today!
                   </p>
                 </div>

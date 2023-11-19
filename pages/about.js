@@ -224,7 +224,7 @@ const About = () => {
                   </h2>
                 </div>
                 <ul
-                  className="wow animate__animated animate__fadeIn"
+                  className="list-disc list-inside wow animate__animated animate__fadeIn"
                   data-wow-delay=".8s"
                 >
                   <li className="pb-6">{t('mission_content_1')}</li>
