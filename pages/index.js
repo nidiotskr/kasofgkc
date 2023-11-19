@@ -26,7 +26,7 @@ const Home = props => {
           <div className="container">
             <div className="py-12 mb-24">
               <div className="w-full mx-auto mb-8 text-center">
-                <div className="w-full h-full ">
+                <div className="mt-6 lg:mt-0 w-full h-full ">
                   <Transition
                     appear={true}
                     show={true}
@@ -39,15 +39,17 @@ const Home = props => {
                   </Transition>
                   <br />
                   <br />
-                  <h2
-                    className="text-color-primary-200 bg-opacity-50 text-lg tracking-tighter lg:tracking-normal sm:text-3xl lg:text-3xl 2xl:text-4xl mb-4 font-heading wow animate__animated animate__fadeIn"
-                    data-wow-delay=".3s"
-                  >
-                    THE KOREAN AMERICAN SOCIETY OF
-                  </h2>
-                  <h1 className="text-color-primary-200 bg-opacity-50 text-2xl tracking-wide sm:tracking-tighter sm:text-5xl lg:text-5xl 2xl:text-6xl font-heading font-semibold">
-                    <TextEffect text="GREATER KANSAS CITY" />
-                  </h1>
+                  <div className="-mt-5 sm:-mt-0">
+                    <h2
+                      className="text-color-primary-200 bg-opacity-50 text-lg tracking-tighter lg:tracking-normal sm:text-3xl lg:text-3xl 2xl:text-4xl mb-4 font-heading wow animate__animated animate__fadeIn"
+                      data-wow-delay=".3s"
+                    >
+                      THE KOREAN AMERICAN SOCIETY OF
+                    </h2>
+                    <h1 className="-mt-5 sm:-mt-3 lg:-mt-2 2xl:-mt-1 text-color-primary-200 bg-opacity-50 text-2xl tracking-wide sm:tracking-tighter sm:text-5xl lg:text-5xl 2xl:text-6xl font-heading font-semibold">
+                      <TextEffect text="GREATER KANSAS CITY" />
+                    </h1>
+                  </div>
                 </div>
               </div>
             </div>
