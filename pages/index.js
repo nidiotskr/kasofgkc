@@ -55,7 +55,10 @@ const Home = props => {
         </section>
         <Welcome />
         <Poster posterPath={mostRecentPosterPath} />
-        <section id="donation-section" className="bg-slate-300 py-24 lg:py-36">
+        <section
+          id="donation-section"
+          className="bg-slate-300 py-24 lg:py-36 px-4"
+        >
           <div className="flex flex-col items-center hover-up-5">
             <div className="flex flex-col max-w-4xl gap-8 lg:gap-16">
               <div className="w-full">
@@ -65,7 +68,7 @@ const Home = props => {
                   </span>
                 </p>
               </div>
-              <div className="flex flex-col m-auto max-w-sm lg:max-w-3xl px-8 lg:px-16">
+              <div className="flex flex-col m-auto max-w-sm lg:max-w-3xl px-4 lg:px-16">
                 <div
                   className="wow animate__animated animate__fadeIn"
                   data-wow-delay=".1s"
@@ -85,7 +88,7 @@ const Home = props => {
                     src={'/assets/imgs/elements/gofundme.jpeg'}
                     alt="gofundme poster"
                   />
-                  <p className="font-heading font-semibold text-sm lg: text-md pt-3 lg:pt-6">
+                  <p className="font-heading font-semibold text-sm lg: text-md pt-4 lg:pt-8">
                     Please scan the barcode to start a donation today!
                   </p>
                 </div>

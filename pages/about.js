@@ -196,11 +196,11 @@ const About = () => {
                   data-wow-delay=".2s"
                 >
                   <div className="w-8 mb-5">
-                    <span className="py-2 px-3 text-xs font-semibold bg-theme-primary text-white rounded">
+                    <span className="py-1.5 px-2.5 text-xs font-semibold bg-theme-primary text-white rounded">
                       1
                     </span>
                   </div>
-                  <h2 className="font-heading font-semibold text-2xl mb-4 ml-2">
+                  <h2 className="font-heading font-semibold text-2xl mb-4 ml-1">
                     {t('vision_title')}
                   </h2>
                 </div>
@@ -215,11 +215,11 @@ const About = () => {
                   data-wow-delay=".6s"
                 >
                   <div className="w-8 mb-5">
-                    <span className="py-2 px-3 text-xs font-semibold bg-theme-primary text-white rounded">
+                    <span className="py-1.5 px-2.5 text-xs font-semibold bg-theme-primary text-white rounded">
                       2
                     </span>
                   </div>
-                  <h2 className="font-heading font-semibold text-2xl mb-4 ml-2">
+                  <h2 className="font-heading font-semibold text-2xl mb-4 ml-1">
                     {t('mission_title')}
                   </h2>
                 </div>
