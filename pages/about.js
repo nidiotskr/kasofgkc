@@ -37,11 +37,16 @@ const About = () => {
               >
                 <img
                   className="w-48 rounded-xl"
-                  src="/assets/imgs/placeholders/president_profile_picture.jpg"
+                  src="/assets/imgs/placeholders/president_profile_picture.jpeg"
                   alt="PPP"
                 />
               </div>
               {i18n.language == 'ko' ? (
+                <span className="font-sans text-lg">문 경 환</span>
+              ) : (
+                <span className="font-sans text-lg">Kay K Mun</span>
+              )}
+              {/* {i18n.language == 'ko' ? (
                 <p
                   className="lg:w-2/3 mx-4 lg:mx-8 font-sans wow animate__animated animated__fadeIn"
                   data-wow-delay=".8s"
@@ -171,13 +176,13 @@ const About = () => {
                   <br />
                   Sincerly,
                   <br />
-                  34th Chairman
+                  35th Chairman
                   <br />
                   Sung Bae Kim
                   <br />
                   <br />
                 </p>
-              )}
+              )} */}
             </div>
           </div>
         </section>
