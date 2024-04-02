@@ -34,7 +34,7 @@ const Footer = props => {
             </div>
             <div>
               <p className="text-sm text-blueGray-400">
-                &copy; 2022. Nidiots. All rights reserved.
+                &copy; 2024. Nidiots. All rights reserved.
               </p>
             </div>
           </div>

@@ -10,7 +10,7 @@ function Poster(props) {
     <section className="bg-slate-200 py-16 lg:py-24">
       <div className="flex flex-col items-center hover-up-5">
         <div className="flex flex-col max-w-4xl gap-8 lg:gap-16">
-          <div className="w-full">
+          <div className="w-full pb-3">
             <p className="text-center wow animate__animated animate__fadeIn">
               <span className="font-heading font-semibold text-3xl lg:text-5xl">
                 {t('event')}

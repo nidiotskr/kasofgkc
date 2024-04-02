@@ -63,7 +63,7 @@ const Home = props => {
         >
           <div className="flex flex-col items-center hover-up-5">
             <div className="flex flex-col max-w-4xl gap-8 lg:gap-16">
-              <div className="w-full">
+              <div className="w-full pb-3">
                 <p className="text-center wow animate__animated animate__fadeIn">
                   <span className="font-heading font-semibold text-3xl lg:text-5xl">
                     {t('donation')}
@@ -72,7 +72,7 @@ const Home = props => {
               </div>
               <div className="flex flex-col m-auto max-w-sm lg:max-w-3xl px-4 lg:px-16">
                 <div
-                  className="wow animate__animated animate__fadeIn"
+                  className="wow animate__animated animate__fadeIn pb-2"
                   data-wow-delay=".1s"
                 >
                   <img
