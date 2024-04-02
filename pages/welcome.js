@@ -12,11 +12,19 @@ const Welcome = () => {
           </span>
         </p>
         <p
-          className="wow animate__animated animate__fadeIn"
+          className="wow animate__animated animate__fadeIn max-w-lg lg:max-w-2xl pb-4"
+          data-wow-delay=".1s"
+        >
+          <span className="text-lg lg:text-2xl text-sky-300 opacity-80">
+            {t('greeting2')}
+          </span>
+        </p>
+        <p
+          className="wow animate__animated animate__fadeIn max-w-lg lg:max-w-2xl"
           data-wow-delay=".1s"
         >
           <span className="text-md lg:text-xl text-white opacity-80">
-            {t('greeting2')}
+            {t('greeting3')}
           </span>
         </p>
       </div>

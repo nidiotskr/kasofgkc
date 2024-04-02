@@ -36,15 +36,19 @@ const About = () => {
                 data-wow-delay=".5s"
               >
                 <img
-                  className="w-48 rounded-xl"
+                  className="w-48 rounded-xl min-w-[100px] md:min-w-[350px]"
                   src="/assets/imgs/placeholders/president_profile_picture.jpeg"
                   alt="PPP"
                 />
               </div>
               {i18n.language == 'ko' ? (
-                <span className="font-sans text-lg">문 경 환</span>
+                <span className="font-sans font-semibold text-lg -mt-4 lg:text-2xl lg:-mt-8">
+                  문 경 환
+                </span>
               ) : (
-                <span className="font-sans text-lg">Kay K Mun</span>
+                <span className="font-sans font-semibold text-lg -mt-4 lg:text-2xl lg:-mt-8">
+                  Kay K Mun
+                </span>
               )}
               {/* {i18n.language == 'ko' ? (
                 <p
