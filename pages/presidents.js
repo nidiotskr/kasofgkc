@@ -8,7 +8,7 @@ function Presidents() {
         <div className="container">
           <div className="flex justify-center">
             <img
-              src="assets/imgs/placeholders/제34대 조직도_20220918.svg"
+              src="assets/imgs/placeholders/제35대_조직도.svg"
               alt="org_map"
             />
           </div>
